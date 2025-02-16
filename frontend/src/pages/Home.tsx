@@ -6,6 +6,7 @@ import ReviewCard from '../components/ReviewCard';
 import FAQItem from '../components/FAQItem';
 import Carousel from '../components/Carousel';
 import PartnerLogo from '../components/PartnerLogo';
+import heroBg from "../assets/hero-bg.png";
 
 const Home: React.FC = () => {
   const [resources, setResources] = useState<Resource[]>([]);
@@ -56,7 +57,7 @@ const Home: React.FC = () => {
       <section
         className="hero-section"
         style={{
-          backgroundImage: 'url(https://via.placeholder.com/1200x600)',
+          backgroundImage: `url(${heroBg})`,
           backgroundSize: 'cover',
         }}
       >
