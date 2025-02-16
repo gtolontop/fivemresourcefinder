@@ -1,5 +1,617 @@
-body, html {
+/* ============================
+   Global & Reset
+=============================== */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Conteneur global centralisé */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================
+   NavBar
+=============================== */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background: #eee;
+  border-radius: 4px;
+}
+
+/* ============================
+   Footer
+=============================== */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* ============================
+   Hero Section
+=============================== */
+.hero-section {
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-buttons button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero-buttons button:first-child {
+  background: #7289da;
+  color: #fff;
+}
+
+.hero-buttons button:first-child:hover {
+  background: #5b6eae;
+}
+
+.hero-buttons button:last-child {
+  background: #fff;
+  color: #333;
+}
+
+.hero-buttons button:last-child:hover {
+  background: #eee;
+}
+
+/* ============================
+   Creator Spotlight Section
+=============================== */
+.creator-spotlight-section {
+  padding: 3rem 0;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.creator-spotlight-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.creator-spotlight-section p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel button {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Spotlight Item */
+.creator-spotlight-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.spotlight-content {
+  flex: 1;
+}
+
+.spotlight-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.spotlight-text {
+  flex: 1;
+  text-align: left;
+}
+
+.spotlight-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.spotlight-text p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.spotlight-text button {
+  padding: 0.8rem 1.2rem;
+  background: #7289da;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.spotlight-text button:hover {
+  background: #5b6eae;
+}
+
+/* ============================
+   Resource Spotlight Section
+=============================== */
+.resource-spotlight-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.resource-spotlight-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.resource-spotlight-section p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.resource-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+}
+
+.resource-card img.resource-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.resource-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.resource-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.view-all-button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.2rem;
+  background: #7289da;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.view-all-button:hover {
+  background: #5b6eae;
+}
+
+/* ============================
+   Reviews Section
+=============================== */
+.reviews-section {
+  padding: 3rem 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.reviews-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.reviews-section p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.reviews-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.review-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card img.review-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  object-fit: cover;
+}
+
+.review-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.review-card h4 span {
+  font-size: 0.9rem;
+  color: #888;
+  margin-left: 0.5rem;
+}
+
+.review-rating {
+  font-size: 1rem;
+  color: #f39c12;
+  margin-bottom: 0.5rem;
+}
+
+.review-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.trustpilot-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* ============================
+   FAQ Section
+=============================== */
+.faq-section {
+  padding: 3rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.faq-item {
+  background: #f1f1f1;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #e2e2e2;
+  cursor: pointer;
+}
+
+.faq-question h4 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.faq-question span {
+  font-size: 1.5rem;
+}
+
+.faq-answer {
+  padding: 1rem;
+  background: #fff;
+}
+
+/* ============================
+   Trusted By Section
+=============================== */
+.trusted-by-section {
+  padding: 3rem 0;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.trusted-by-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.partner-logo {
+  flex: 0 0 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================
+   Resources Page
+=============================== */
+.resources-page {
+  padding-bottom: 2rem;
+}
+
+.resources-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.resources-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  width: 90%;
+  max-width: 400px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ============================
+   Store Page
+=============================== */
+.store-page {
+  padding-bottom: 2rem;
+}
+
+.store-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.store-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.store-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.store-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.store-card:hover {
+  transform: translateY(-5px);
+}
+
+.store-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.store-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.store-card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.store-card button {
+  padding: 0.8rem 1.2rem;
+  background: #7289da;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.store-card button:hover {
+  background: #5b6eae;
+}
+
+/* ============================
+   About, Login, Admin Pages
+=============================== */
+.about-page, .login-page, .admin-page {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.about-section, .login-section, .admin-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section h2, .login-section h2, .admin-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p, .login-section p, .admin-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.login-section button {
+  padding: 0.8rem 1.2rem;
+  background: #7289da;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-section button:hover {
+  background: #5b6eae;
 }
