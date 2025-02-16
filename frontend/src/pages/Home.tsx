@@ -30,7 +30,7 @@ const Home: React.FC = () => {
   const creatorSpotlightItems = [
     <div className="creator-spotlight-item" key="1">
       <div className="spotlight-content">
-        <img src="https://via.placeholder.com/300x200" alt="Creator 1" className="spotlight-image" />
+        <img src="https://dummyimage.com/360x300" alt="Creator 1" className="spotlight-image" />
       </div>
       <div className="spotlight-text">
         <h3>Creator 1</h3>
