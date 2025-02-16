@@ -359,17 +359,15 @@ html {
 =============================== */
 .spotlight-card {
   display: flex;
-  align-items: center;    /* Centre verticalement l'image et le texte */
-  background: #1a1a1a;
+  /*background: #1a1a1a;*/
   padding: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
   width: 100%;
-  max-width: 500px;       /* Largeur max de la carte */
-  margin: auto;           /* Centre horizontalement la carte */
+  max-width: 500px;
+  margin: auto;
   text-align: left;
-
-  width: 800px;
+  align-items: stretch;
   gap: 0px var(--item-spacing-80, 80px);
 
   &:hover {
@@ -377,8 +375,7 @@ html {
   }
 
   .spotlight-image {
-    width: 150px;
-    height: 150px;
+    flex: 0 0 200px;  /* Largeur fixe (exemple 200px) ou flex: 1 si vous voulez qu'elle prenne un pourcentage */
     background: repeating-linear-gradient(
       45deg,
       #333,
@@ -387,19 +384,33 @@ html {
       #222 20px
     );
     border-radius: 10px;
-    margin-right: 20px;
   }
+
+  .spotlight-image {
+    flex: 1;      /* l'image prend tout l'espace possible */
+  }
+  .spotlight-content {
+    flex: 1;      /* le texte prend aussi tout l'espace possible */
+  }
+  
 
   .spotlight-content {
     flex: 1;
 
     h3 {
-      font-size: 1.5rem;
       margin-bottom: 0.5rem;
+
+      color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
+      font-family: var(--font-family-Font-1, Inter);
+      font-size: var(--font-size-50, 1.5rem);
+      font-style: normal;
+      font-weight: var(--font-weight-700, 700);
+      letter-spacing: var(--letter-spacing--2, -1px);
     }
 
     p {
-      color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #EBEBEB));
+      margin-bottom: 0.5rem;
+      color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
       font-family: var(--font-family-Font-1, Inter);
       font-size: var(--font-size-24, 1rem);
       font-style: normal;
@@ -409,22 +420,24 @@ html {
     }
 
     .spotlight-button {
-      background: linear-gradient(180deg, #ff5c00 0%, #993700 100%);
-      border: none;
+      border-radius: 8px;
+      background: var(--color-text-small, linear-gradient(180deg, #FF5C00 0%, #993700 100%));
+      box-shadow: 0px 0.707px 0.707px -0.625px rgba(0, 0, 0, 0.15), 0px 1.807px 1.807px -1.25px rgba(0, 0, 0, 0.14), 0px 3.622px 3.622px -1.875px rgba(0, 0, 0, 0.14), 0px 6.866px 6.866px -2.5px rgba(0, 0, 0, 0.13), 0px 13.647px 13.647px -3.125px rgba(0, 0, 0, 0.11), 0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);      border: none;
       padding: 10px 20px;
       color: #fff;
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s;
+      width: 100%;
 
       &:hover {
-        background: linear-gradient(180deg, #993700 0%, #ff5c00 100%);
-      }
+        border-radius: 8px;
+        background: var(--color-text-small, linear-gradient(180deg, #ff5e00c9 0%, #993800b6 100%));
+        box-shadow: 0px 0.707px 0.707px -0.625px rgba(0, 0, 0, 0.15), 0px 1.807px 1.807px -1.25px rgba(0, 0, 0, 0.14), 0px 3.622px 3.622px -1.875px rgba(0, 0, 0, 0.14), 0px 6.866px 6.866px -2.5px rgba(0, 0, 0, 0.13), 0px 13.647px 13.647px -3.125px rgba(0, 0, 0, 0.11), 0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);      }
     }
   }
 }
-
 
 /* ============================
    Resource Spotlight Section

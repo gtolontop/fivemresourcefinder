@@ -4,6 +4,7 @@ interface Card {
   title: string;
   description: string;
   buttonText: string;
+  theme: 'theme1' | 'theme2';
 }
 
 interface SlideData {
@@ -18,12 +19,14 @@ const slidesData: SlideData[] = [
         description:
           'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
         buttonText: 'Buy Me',
+        theme: 'theme1',
       },
       {
         title: 'Spotlight Slot 2',
         description:
           'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
         buttonText: 'Buy Me',
+        theme: 'theme2',
       },
     ],
   },
@@ -98,18 +101,31 @@ const SpotlightSection: React.FC = () => {
               >
                 <div className="slide-content">
                   <div className="slide-right">
-                    {slide.cards.map((card, cardIndex) => (
-                      <div className="spotlight-card" key={cardIndex}>
-                        <div className="spotlight-image" />
-                        <div className="spotlight-content">
-                          <h3>{card.title}</h3>
-                          <p>{card.description}</p>
-                          <button className="spotlight-button">
-                            {card.buttonText}
-                          </button>
+                    {slide.cards.map((card, cardIndex) =>
+                      card.theme === 'theme1' ? (
+                        <div className="spotlight-card" key={cardIndex}>
+                          <div className="spotlight-image" />
+                          <div className="spotlight-content">
+                            <h3>{card.title}</h3>
+                            <p>{card.description}</p>
+                            <button className="spotlight-button">
+                              {card.buttonText}
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ) : (
+                        <div className="spotlight-card" key={cardIndex}>
+                          <div className="spotlight-image" />
+                          <div className="spotlight-content">
+                            <h3>{card.title}</h3>
+                            <p>{card.description}</p>
+                            <button className="spotlight-button">
+                              {card.buttonText}
+                            </button>
+                          </div>
+                        </div>
+                      )
+                    )}
                   </div>
                 </div>
               </div>
