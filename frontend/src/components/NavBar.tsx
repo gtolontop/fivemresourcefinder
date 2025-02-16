@@ -1,12 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const NavBar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo">
-          <Link to="/">FiveM ResourceFinder</Link>
+          <Link to="/">
+            <img src={logo} alt="Logo" className="logo-image" />
+          </Link>
         </div>
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
