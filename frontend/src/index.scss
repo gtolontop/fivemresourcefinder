@@ -24,6 +24,26 @@ body, html {
 /* ============================
    NavBar
 =============================== */
+
+.nav-links li {
+  list-style: none;
+  display: inline;
+  margin-right: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.active-link {
+  color: white !important;
+  background-color: #007bff; /* Bleu pour la page active */
+  border-radius: 5px;
+}
+
 .navbar {
   background: #fff;
   border-bottom: 1px solid #ddd;
