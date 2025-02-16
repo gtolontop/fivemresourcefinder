@@ -43,8 +43,7 @@ html {
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  background: #24242b73;
 }
 
 .navbar-container {
@@ -52,7 +51,7 @@ html {
   align-items: center;
   justify-content: space-between;
   width: 90%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -78,10 +77,6 @@ html {
   text-decoration: none;
   color: white;
   transition: color 0.3s ease, background 0.3s ease;
-}
-
-.navbar.scrolled .nav-links a {
-  color: black;
 }
 
 .nav-links a:hover {
@@ -372,10 +367,7 @@ html {
 }
 
 .spotlight-text button {
-  padding: 0.8rem 1.2rem;
-  background: #7289da;
   border: none;
-  border-radius: 4px;
   color: #fff;
   cursor: pointer;
   transition: background 0.3s;
