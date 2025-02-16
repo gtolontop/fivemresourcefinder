@@ -74,7 +74,7 @@ const Home: React.FC = () => {
       {/* Creator Spotlight Section */}
       <section className="creator-spotlight-section">
         <h2>Creator Spotlight</h2>
-        <p>Description blabla</p>
+        <p>Showcase your resource to a broader audience! This space is dedicated to highlighting your work right on our website's front page.</p>
         <Carousel items={creatorSpotlightItems} />
       </section>
 
