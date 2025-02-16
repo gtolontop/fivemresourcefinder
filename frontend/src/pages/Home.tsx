@@ -58,7 +58,6 @@ const Home: React.FC = () => {
         style={{
           backgroundImage: 'url(https://via.placeholder.com/1200x600)',
           backgroundSize: 'cover',
-          filter: 'blur(2px)'
         }}
       >
         <div className="hero-content">

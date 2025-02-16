@@ -65,12 +65,16 @@ html {
 }
 
 .navbar {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+  background: transparent;
+  border-bottom: none;
   padding: 0.5rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.navbar.scrolled {
+  background: #fff;
 }
 
 .navbar-container {
