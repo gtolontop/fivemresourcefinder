@@ -85,7 +85,10 @@ html {
 }
 
 .nav-links a:hover {
-  background: var(--color-text-small, linear-gradient(180deg, #FF5C00 0%, #993700 100%));
+  background: var(
+    --color-text-small,
+    linear-gradient(180deg, #ff5c00 0%, #993700 100%)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -143,6 +146,13 @@ html {
   text-align: center;
   padding: 2rem;
   width: 100%;
+}
+
+.hero-section {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .hero-content {
