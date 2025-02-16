@@ -33,8 +33,8 @@ const Home: React.FC = () => {
         <img src="https://dummyimage.com/360x300" alt="Creator 1" className="spotlight-image" />
       </div>
       <div className="spotlight-text">
-        <h3>Creator 1</h3>
-        <p>Description for Creator 1</p>
+        <h3>Spotlight Slot 1</h3>
+        <p>Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!</p>
         <button onClick={() => console.log('Buy Me clicked for Creator 1')}>Buy Me</button>
       </div>
     </div>,

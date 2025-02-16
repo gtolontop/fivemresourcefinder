@@ -325,6 +325,13 @@ html {
 
 .spotlight-content {
   flex: 1;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0px var(--item-spacing-80, 80px);
+  flex-wrap: wrap;
 }
 
 .spotlight-content img {
@@ -338,12 +345,17 @@ html {
 }
 
 .spotlight-text {
-  flex: 1;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--item-spacing-20, 20px);
+  flex: 1 0 0;
+  max-width: 360px;
 }
 
 .spotlight-text h3 {
-  font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
   font-family: var(--font-family-Font-1, Inter);
@@ -374,7 +386,6 @@ html {
   display: flex;
   width: 360px;
   height: 40px;
-  padding: 10.71px 154.45px 11.59px 154.44px;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
