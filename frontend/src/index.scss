@@ -261,161 +261,153 @@ html {
     padding: 4rem 1rem;
   }
 }
+
 /* ============================
    Creator Spotlight Section
 =============================== */
-.creator-spotlight-section {
-  padding: 3rem 0;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* alignement à gauche */
+.spotlight-section {
+  background: #0e0e0e;
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
 }
 
-/* Header de la section */
-.creator-spotlight-header {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.spotlight-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.spotlight-description {
+  font-size: 1rem;
   margin-bottom: 2rem;
 }
 
-.creator-spotlight-header h2 {
-  font-size: var(--font-size-50, 50px);
-  color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
-  font-family: var(--font-family-Font-1, Inter);
-  font-style: normal;
-  font-weight: var(--font-weight-700, 700);
-  line-height: var(--line-height-60, 60px); /* 120% */
-  letter-spacing: var(--letter-spacing--2_6, -2.6px);
-  margin: 0 0 1rem 0;
-}
-
-.creator-spotlight-header p {
-  font-size: var(--font-size-24, 24px);
-  color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #EBEBEB));
-  font-family: var(--font-family-Font-1, Inter);
-  font-style: normal;
-  font-weight: var(--font-weight-500, 500);
-  line-height: var(--line-height-36, 36px); /* 150% */
-  letter-spacing: var(--letter-spacing--0_5, -0.5px);
-  margin: 0 0 2rem 0;
-}
-
-/* Conteneur des 2 premiers items spotlight */
-.spotlight-items-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-}
-
-/* Un item spotlight */
-.creator-spotlight-item {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 2rem;
-  width: 100%;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Pour inverser l'ordre (texte / image) */
-.creator-spotlight-item.reverse {
-  flex-direction: row-reverse;
-}
-
-/* Zone contenant l'image */
-.spotlight-content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 360px;
-}
-
-.spotlight-content img {
-  width: 360px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  opacity: var(--opacity-100, 1);
-}
-
-/* Zone texte */
-.spotlight-text {
-  flex: 1;
-  max-width: 360px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px; /* Espace entre les éléments */
-  text-align: left;
-}
-
-.spotlight-text h3 {
-  font-size: var(--font-size-50, 50px);
-  color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
-  font-family: var(--font-family-Font-1, Inter);
-  font-style: normal;
-  font-weight: var(--font-weight-700, 700);
-  line-height: var(--line-height-60, 60px);
-  letter-spacing: -2px;
-  margin: 0 0 1rem 0;
-}
-
-.spotlight-text p {
-  font-size: var(--font-size-24, 24px);
-  color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
-  font-family: var(--font-family-Font-1, Inter);
-  font-style: normal;
-  font-weight: var(--font-weight-500, 500);
-  line-height: var(--line-height-36, 36px);
-  letter-spacing: -0.5px;
-  margin: 0 0 1.5rem 0;
-}
-
-.spotlight-text button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 360px;
-  height: 40px;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s;
-  background: linear-gradient(180deg, #ff5c00 0%, #993700 100%);
-  box-shadow: 0px 0.707px 0.707px -0.625px rgba(0, 0, 0, 0.15),
-    0px 1.807px 1.807px -1.25px rgba(0, 0, 0, 0.14),
-    0px 3.622px 3.622px -1.875px rgba(0, 0, 0, 0.14),
-    0px 6.866px 6.866px -2.5px rgba(0, 0, 0, 0.13),
-    0px 13.647px 13.647px -3.125px rgba(0, 0, 0, 0.11),
-    0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);
-}
-
-/* ============================
-   Carousel pour spotlight supplémentaires
-   (affichage de 2 items par slide)
-=============================== */
-.carousel-container {
-  margin-top: 2rem;
-  width: 100%;
+.spotlight-slider {
+  position: relative;
   overflow: hidden;
+  margin: 0 auto;
+  
+  .spotlight-slider-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .spotlight-slide {
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    .swiper-pagination-bullet {
+      background: rgba(255, 92, 0, 0.5);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #ff5c00;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #ff5c00;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ff9f00;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
 }
 
-.carousel {
+.spotlight-card {
   display: flex;
-  gap: 2rem;
-  transition: transform 0.3s ease;
-}
+  flex-direction: row;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
 
-/* Chaque slide du carousel contiendra 2 items */
-.carousel-item {
-  flex: 1 0 50%;
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .spotlight-image {
+    width: 150px;
+    height: 150px;
+    background: repeating-linear-gradient(
+      45deg,
+      #333,
+      #333 10px,
+      #222 10px,
+      #222 20px
+    );
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+
+  .spotlight-content {
+    flex: 1;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .spotlight-button {
+    background: linear-gradient(180deg, #ff5c00 0%, #993700 100%);
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: linear-gradient(180deg, #993700 0%, #ff5c00 100%);
+    }
+  }
 }
 
 /* ============================
