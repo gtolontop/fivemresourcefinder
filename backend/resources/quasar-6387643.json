@@ -1,0 +1,32 @@
+{
+    "title": "**__Quasar Black Market__**",
+    "description": "**Description:**\n*Welcome to the best illegal market for items and weapons! Quasar Black Market offers unparalleled immersion with detailed camera sequences, a smooth and engaging user interface, and a realistic and exciting environment where every interaction is designed to offer maximum thrill and authenticity.*",
+    "url": "https://www.quasar-store.com/package/6387643",
+    "color": 3092790,
+    "fields": [
+      {
+        "name": "💰 **Price**",
+        "value": "`24.99$`",
+        "inline": true
+      },
+      {
+        "name": "🛠️ **Features**",
+        "value": "• **This package is compatible with ESX and QBCore frameworks and requires ox_lib. It guarantees a seamless and exciting player experience, elevating your server to a new level of immersion and realism.**\n• **Discover why our DLCs are the best choice for enhancing your gaming experience.**",
+        "inline": false
+      },
+      {
+        "name": "✅ **Compatibilities**",
+        "value": "*ESX Ready,QBCore Ready,Escrow Protection*",
+        "inline": false
+      }
+    ],
+    "footer": {
+      "text": "Powered by FiveM ResourceFinder"
+    },
+    "image": {
+      "url": "https://i.imgur.com/zrzhgCJ.png"
+    },
+    "thumbnail": {
+      "url": "https://img.youtube.com/vi/3YUwq5dDz80/hqdefault.jpg"
+    }
+  }

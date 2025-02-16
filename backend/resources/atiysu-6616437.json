@@ -1,0 +1,31 @@
+{
+    "title": "**__Business Management__**",
+    "description": "**Description :**\n*Take your FiveM server experience to the next level with our innovative Business Management Script, now available on the Tebex Store. This feature-packed script allows players to own and operate businesses, craft items, and manage workers while offering seamless integration with your existing server features.*",
+    "url": "https://atiysu.tebex.io/package/6616437",
+    "color": 3092790,
+    "fields": [
+      {
+        "name": "💰 **Price**",
+        "value": "`30`",
+        "inline": true
+      },
+      {
+        "name": "👤 **Creator**",
+        "value": "*Atiysu*",
+        "inline": true
+      },
+      {
+        "name": "🛠️ **Features**",
+        "value": "• **Available now on Tebex Store, the FiveM Business Management Script is designed to revolutionize roleplay and server monetization, making it an indispensable tool for server owners.**\n• **Here are some of the most frequently asked questions to us.**",
+        "inline": false
+      },
+      {
+        "name": "💬 **Discord**",
+        "value": "[Serveur Discord](https://discord.gg/dvPMYsRFNx)",
+        "inline": false
+      }
+    ],
+    "footer": {
+      "text": "Powered by FiveM ResourceFinder"
+    }
+  }

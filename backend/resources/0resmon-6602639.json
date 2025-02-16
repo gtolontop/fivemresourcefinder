@@ -1,0 +1,34 @@
+{
+    "title": "🎉 Fivem Federal Bank Multiplayer Heist Script - MAP + MINIGAMEPACK + NPC DIALOG 🎉",
+    "description": "FRKN-Bank Heist delivers an unparalleled heist experience for your FiveM servers. Players take on unique roles, working together as a team in this dynamic, story-driven adventure. This is not just a heist—it's a teamwork-driven story brought to life! Map open source is not provided.",
+    "url": "https://0resmon.tebex.io/package/6602639",
+    "color": 49151,
+    "fields": [
+      {
+        "name": "💰 Price",
+        "value": "`60`",
+        "inline": true
+      },
+      {
+        "name": "🛠️ Features",
+        "value": "• Every task immerses players in a gripping narrative, offering a variety of challenges.\n• Every stage is enriched with a compelling narrative.\n• Success hinges on players fulfilling their roles effectively.\n• Built to deliver a seamless experience for all servers.",
+        "inline": false
+      },
+      {
+        "name": "🔗 Dependencies",
+        "value": "Prepare by changing into disguises.",
+        "inline": false
+      },
+      {
+        "name": "⚙️ How It Works",
+        "value": "• Retrieve blueprints while interacting with NPCs.\n• Disable cameras with the drone.\n• Hack, sabotage, and plant bombs to clear the way.\n• Take down an airplane, secure the bank manager, and finish the mission.",
+        "inline": false
+      }
+    ],
+    "footer": {
+      "text": "Powered by FiveM ResourceFinder"
+    },
+    "image": {
+      "url": "https://i.ibb.co/qYDgQQy/Screenshot-9.png"
+    }
+  }

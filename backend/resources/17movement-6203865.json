@@ -1,0 +1,62 @@
+{
+    "title": "**__Multiplayer Miner Job__**",
+    "description": "**Description:**\n*Transform your FiveM server into a bustling mining operation with the groundbreaking MINER JOB script, tailor-made for an enthralling solo and group gameplay experience. Embark on a journey deep beneath the earth's surface, where teamwork and strategy unlock the riches hidden within*",
+    "url": "https://17movement.net/scripts/6203865",
+    "color": 3092790,
+    "fields": [
+      {
+        "name": "💰 **Price**",
+        "value": "`39.99$`",
+        "inline": true
+      },
+      {
+        "name": "👤 **Creator**",
+        "value": "*MuDzYn.*",
+        "inline": true
+      },
+      {
+        "name": "🛠️ **Features**",
+        "value": "• **INTRODUCING MULTIPLAYER MINER JOB**\n• **Introducing our groundbreaking Multiplayer Miner Job script for your servers!**\n• **This script elevates the multiplayer experience, allowing players on the server to engage in thrilling cooperative gameplay with friends. It's designed to boost profits significantly while effectively reducing the grind, ensuring an enjoyable and efficient gaming session. Players can immerse themselves in their roles, enjoying a role-playing adventure while earning in-game currency through legitimate jobs. Dive into a world where teamwork pays off and every job is an opportunity for fun and profit!**\n• **INTEGRATED NOTIFICATIONS & UNIVERSAL COMPATIBILITY**",
+        "inline": false
+      },
+      {
+        "name": "🔗 **Dependencies**",
+        "value": "*Our Miner job features integrated modern notifications and is STANDALONE, ensuring compatibility with any framework. We also provide ready-made presets for popular frameworks such as ESX and QBCore, facilitating seamless integration.*",
+        "inline": false
+      },
+      {
+        "name": "⚙️ **How It Works**",
+        "value": "• *EXCLUSIVE BRAND & CUSTOM MLO!*\n• *This Miner script proudly introduces its own exclusive brand named \"Tunnel Titans\", seamlessly integrated within the GTA V universe. Every job showcases a distinctive custom vehicle emblazoned with the brand logo, further enriching the immersive experience.*\n• *DEVELOPER INFO & CUSTOMIZATION*\n• *Easily translatable into your preferred language, Miner job is compatible with any clothing system and offers a wealth of configuration options, including: 1. Integration with your own notification and payout systems 2. Connection to your own car systems (belts, fuel, etc.) 3. Choice between third-eye or markers & 3D Text 4. Customization of 3D markers, blips, job locations, and more*",
+        "inline": false
+      },
+      {
+        "name": "✅ **Compatibilities**",
+        "value": "*ESX,QBCore,VRP,Standalone*",
+        "inline": false
+      },
+      {
+        "name": "⭐ **Reviews**",
+        "value": "**Review #1: serpeto**\nTop Service & Best Creators in FiveM dont think just buy..\n\n**Review #2: _s4nn.**\nVery nice support, quickly and nice info of each script i ask 10/10\n\n**Review #3: cat_a001**\nGreat service, I always enjoy the friendly help of the 17 Movement team, thank you\n\n**Review #4: syernide**\nThank you so much for the support - I appreciate the honesty and also getting straight to the point with my questions <3\n\n**Review #5: reluxetm**\nThe support was very good and helpful. It just took a bit long to get help and between each response, but otherwise, it was great!\n",
+        "inline": false
+      },
+      {
+        "name": "📄 **Documentation**",
+        "value": "[Link here](https://docs.17movement.net/)",
+        "inline": false
+      },
+      {
+        "name": "💬 **Discord**",
+        "value": "[Discord Server](https://discord.gg/cbdkQfseH3)",
+        "inline": false
+      }
+    ],
+    "footer": {
+      "text": "Powered by FiveM ResourceFinder"
+    },
+    "image": {
+      "url": "https://us.17movement.net/assets/screenshots/miner/minergif1.gif"
+    },
+    "thumbnail": {
+      "url": "https://us.17movement.net/assets/screenshots/miner/minergif2.gif"
+    }
+  }
