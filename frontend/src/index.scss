@@ -77,7 +77,7 @@ html {
   font-weight: var(--font-weight-500, 500);
   text-decoration: none;
   color: white;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background 0.3s ease;
 }
 
 .navbar.scrolled .nav-links a {
@@ -85,8 +85,10 @@ html {
 }
 
 .nav-links a:hover {
-  background: #eee;
-  border-radius: 4px;
+  background: var(--color-text-small, linear-gradient(180deg, #FF5C00 0%, #993700 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .active-link {
@@ -132,7 +134,7 @@ html {
 =============================== */
 .hero-section {
   position: relative;
-  height: 600px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,6 +142,7 @@ html {
   background-position: center;
   text-align: center;
   padding: 2rem;
+  width: 100%;
 }
 
 .hero-content {
@@ -218,7 +221,7 @@ html {
   font-size: var(--font-size-14, 14px);
   font-style: normal;
   font-weight: var(--font-weight-700, 700);
-  line-height: var(--line-height-16_8, 16.8px); /* 120% */
+  line-height: var(--line-height-16_8, 16.8px);
 }
 
 .hero-buttons button:last-child {
@@ -226,12 +229,11 @@ html {
   background: var(--color-grey-20, #333);
   color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
   text-align: center;
-
   font-family: var(--font-family-Font-1, Inter);
   font-size: var(--font-size-14, 14px);
   font-style: normal;
   font-weight: var(--font-weight-700, 700);
-  line-height: var(--line-height-16_8, 16.8px); /* 120% */
+  line-height: var(--line-height-16_8, 16.8px);
 }
 
 .hero-buttons button:last-child:hover {
@@ -250,7 +252,7 @@ html {
   }
 
   .hero-section {
-    height: auto;
+    height: 100vh;
     padding: 4rem 1rem;
   }
 }
