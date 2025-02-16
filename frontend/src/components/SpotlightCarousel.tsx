@@ -1,60 +1,54 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-interface Slide {
+interface Card {
   title: string;
   description: string;
   buttonText: string;
 }
 
-const slidesData: Slide[] = [
+interface SlideData {
+  cards: Card[];
+}
+
+const slidesData: SlideData[] = [
   {
-    title: 'Spotlight Slot 1',
-    description:
-      'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
-    buttonText: 'Buy Me',
+    cards: [
+      {
+        title: 'Spotlight Slot 1',
+        description:
+          'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
+        buttonText: 'Buy Me',
+      },
+      {
+        title: 'Spotlight Slot 2',
+        description:
+          'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
+        buttonText: 'Buy Me',
+      },
+    ],
   },
-  {
-    title: 'Spotlight Slot 2',
-    description:
-      'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
-    buttonText: 'Buy Me',
-  },
-  {
-    title: 'Spotlight Slot 3',
-    description:
-      'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
-    buttonText: 'Buy Me',
-  },
-  {
-    title: 'Spotlight Slot 4',
-    description:
-      'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
-    buttonText: 'Buy Me',
-  },
+  /*{
+    cards: [
+      {
+        title: 'Spotlight Slot 3',
+        description:
+          'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
+        buttonText: 'Buy Me',
+      },
+      {
+        title: 'Spotlight Slot 4',
+        description:
+          'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
+        buttonText: 'Buy Me',
+      },
+    ],
+  },*/
 ];
 
 const SpotlightSection: React.FC = () => {
-  // currentIndex correspond à l'index du groupe de slides affiché
+  const [slidesPerView] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
-  // Affiche 2 slides à partir de 768px de largeur, sinon 1
-  const [slidesPerView, setSlidesPerView] = useState(
-    window.innerWidth >= 768 ? 2 : 1
-  );
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
-  // Met à jour le nombre de slides par vue en fonction de la taille de l'écran
-  const updateSlidesPerView = () => {
-    const newSlidesPerView = window.innerWidth >= 768 ? 2 : 1;
-    setSlidesPerView(newSlidesPerView);
-    setCurrentIndex(0); // On réinitialise l'index lors du changement de vue
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', updateSlidesPerView);
-    return () => window.removeEventListener('resize', updateSlidesPerView);
-  }, []);
-
-  // Calcul de l'index maximum (pour les groupes de slides)
   const maxIndex = Math.max(slidesData.length - slidesPerView, 0);
 
   const nextSlide = () => {
@@ -65,7 +59,6 @@ const SpotlightSection: React.FC = () => {
     setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : maxIndex));
   };
 
-  // Autoplay toutes les 3 secondes
   useEffect(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
@@ -75,22 +68,22 @@ const SpotlightSection: React.FC = () => {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [currentIndex, slidesPerView, maxIndex]);
+  }, [currentIndex, maxIndex]);
 
-  // Le nombre de bullets correspond au nombre de groupes (maxIndex + 1)
   const paginationCount = maxIndex + 1;
 
   return (
     <section className="spotlight-section">
       <div className="container">
+        {/* Titre principal et description */}
         <h2 className="spotlight-title">Creator Spotlight</h2>
         <p className="spotlight-description">
           Showcase your resource to a broader audience! This space is dedicated
           to highlighting your work right on our website's front page.
         </p>
 
+        {/* Slider */}
         <div className="spotlight-slider">
-          {/* Wrapper contenant l'ensemble des slides */}
           <div
             className="spotlight-slider-wrapper"
             style={{
@@ -101,17 +94,22 @@ const SpotlightSection: React.FC = () => {
               <div
                 className="spotlight-slide"
                 key={index}
-                // Chaque slide occupe 100/slidesPerView % de la largeur du conteneur
                 style={{ flex: `0 0 ${100 / slidesPerView}%` }}
               >
-                <div className="spotlight-card">
-                  <div className="spotlight-image"></div>
-                  <div className="spotlight-content">
-                    <h3>{slide.title}</h3>
-                    <p>{slide.description}</p>
-                    <button className="spotlight-button">
-                      {slide.buttonText}
-                    </button>
+                <div className="slide-content">
+                  <div className="slide-right">
+                    {slide.cards.map((card, cardIndex) => (
+                      <div className="spotlight-card" key={cardIndex}>
+                        <div className="spotlight-image" />
+                        <div className="spotlight-content">
+                          <h3>{card.title}</h3>
+                          <p>{card.description}</p>
+                          <button className="spotlight-button">
+                            {card.buttonText}
+                          </button>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -126,7 +124,7 @@ const SpotlightSection: React.FC = () => {
             &#10095;
           </button>
 
-          {/* Bullets de pagination */}
+          {/* Pagination */}
           <div className="swiper-pagination">
             {Array.from({ length: paginationCount }).map((_, index) => (
               <span
@@ -135,7 +133,7 @@ const SpotlightSection: React.FC = () => {
                   index === currentIndex ? 'swiper-pagination-bullet-active' : ''
                 }`}
                 onClick={() => setCurrentIndex(index)}
-              ></span>
+              />
             ))}
           </div>
         </div>
