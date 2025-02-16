@@ -14,12 +14,18 @@ body, html {
   color: #333;
 }
 
-/* Conteneur global centralisé */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+:root {
+  --font-family-Font-1: "Inter", sans-serif;
+  --font-weight-500: 500;
+  --color-text-small: linear-gradient(180deg, #FF5C00 0%, #993700 100%);
+}
+
 
 /* ============================
    NavBar
@@ -38,10 +44,24 @@ body, html {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+
+/* Style de l'élément actif */
 .active-link {
-  color: white !important;
-  background-color: #007bff; /* Bleu pour la page active */
-  border-radius: 5px;
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: 18.75px;
+  font-style: normal;
+  font-weight: var(--font-weight-500, 500);
+  line-height: 37.5px;
+  letter-spacing: -0.187px;
+  
+  background: var(--color-text-small, linear-gradient(180deg, #FF5C00 0%, #993700 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Désactiver le hover pour les liens actifs */
+  pointer-events: none;
+  cursor: pointer;
 }
 
 .navbar {
@@ -79,10 +99,14 @@ body, html {
 }
 
 .nav-links a {
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: 18.75px;
+  font-style: normal;
+  font-weight: var(--font-weight-500, 500);
+  line-height: 37.5px;
+  letter-spacing: -0.187px;
   text-decoration: none;
-  color: #333;
-  padding: 0.5rem 1rem;
-  transition: background 0.3s;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-links a:hover {
