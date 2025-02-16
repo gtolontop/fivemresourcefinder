@@ -7,8 +7,9 @@
   box-sizing: border-box;
 }
 
-body, html {
-  font-family: 'Arial', sans-serif;
+body,
+html {
+  font-family: "Arial", sans-serif;
   line-height: 1.6;
   background: #f8f8f8;
   color: #333;
@@ -23,9 +24,8 @@ body, html {
 :root {
   --font-family-Font-1: "Inter", sans-serif;
   --font-weight-500: 500;
-  --color-text-small: linear-gradient(180deg, #FF5C00 0%, #993700 100%);
+  --color-text-small: linear-gradient(180deg, #ff5c00 0%, #993700 100%);
 }
-
 
 /* ============================
    NavBar
@@ -44,8 +44,6 @@ body, html {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-
-/* Style de l'élément actif */
 .active-link {
   font-family: var(--font-family-Font-1, Inter);
   font-size: 18.75px;
@@ -53,13 +51,15 @@ body, html {
   font-weight: var(--font-weight-500, 500);
   line-height: 37.5px;
   letter-spacing: -0.187px;
-  
-  background: var(--color-text-small, linear-gradient(180deg, #FF5C00 0%, #993700 100%));
+
+  background: var(
+    --color-text-small,
+    linear-gradient(180deg, #ff5c00 0%, #993700 100%)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
-  /* Désactiver le hover pour les liens actifs */
+
   pointer-events: none;
   cursor: pointer;
 }
@@ -90,8 +90,12 @@ body, html {
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
+  width: 730px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
 }
 
 .nav-links li {
@@ -149,7 +153,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -248,7 +252,7 @@ body, html {
   padding: 2rem;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -324,7 +328,7 @@ body, html {
   padding: 1rem;
   border-radius: 8px;
   text-align: left;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
@@ -406,7 +410,7 @@ body, html {
   border-radius: 8px;
   margin-bottom: 1rem;
   text-align: left;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
 }
@@ -580,7 +584,7 @@ body, html {
   background: #fff;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 250px;
   text-align: center;
   transition: transform 0.3s;
@@ -625,22 +629,30 @@ body, html {
 /* ============================
    About, Login, Admin Pages
 =============================== */
-.about-page, .login-page, .admin-page {
+.about-page,
+.login-page,
+.admin-page {
   padding: 3rem 1rem;
   text-align: center;
 }
 
-.about-section, .login-section, .admin-section {
+.about-section,
+.login-section,
+.admin-section {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.about-section h2, .login-section h2, .admin-section h2 {
+.about-section h2,
+.login-section h2,
+.admin-section h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.about-section p, .login-section p, .admin-section p {
+.about-section p,
+.login-section p,
+.admin-section p {
   font-size: 1rem;
   color: #555;
   margin-bottom: 1rem;
