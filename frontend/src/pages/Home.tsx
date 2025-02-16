@@ -63,7 +63,7 @@ const Home: React.FC = () => {
       >
         <div className="hero-content">
           <h1>FiveM ResourceFinder</h1>
-          <p>Description blabla</p>
+          <p>ResourceFinder is a community dedicated to helping you find the best FiveM resources for your server. We don't create the resources ourselves, but we provide a platform to keep track of all the available resources out there—from free scripts to premium options, custom HUDs, maps, and more.</p>
           <div className="hero-buttons">
             <button onClick={() => window.open('https://discord.gg/', '_blank')}>Join Our Discord</button>
             <button>Show More</button>
