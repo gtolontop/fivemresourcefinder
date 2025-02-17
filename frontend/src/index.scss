@@ -44,6 +44,7 @@ html {
 
 .navbar.scrolled {
   background: #24242b73;
+  backdrop-filter: blur(10px);
 }
 
 .navbar-container {
@@ -268,8 +269,7 @@ html {
 .spotlight-section {
   background: #0e0e0e;
   color: #fff;
-  padding: 4rem 1rem;
-  text-align: center;
+  padding: 4rem 12rem;
 
   .container {
     max-width: 1200px;
@@ -285,6 +285,22 @@ html {
     font-size: 1rem;
     margin-bottom: 2rem;
   }
+}
+
+.spotlight-header {
+  display: flex;
+  padding: 0 11.86rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.resource-header {
+  display: flex;
+  padding: 0 15rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* ============================
@@ -314,14 +330,14 @@ html {
     transform: translateY(-50%);
     background: transparent;
     border: none;
-    color: #ff5c00;
+    color: #E4E7EC;
     font-size: 20px;
     cursor: pointer;
     z-index: 10;
     transition: color 0.3s;
 
     &:hover {
-      color: #ff9f00;
+      color: #ff5c00;
     }
   }
 
@@ -339,18 +355,22 @@ html {
     margin-top: 1rem;
 
     .swiper-pagination-bullet {
-      background: rgba(255, 92, 0, 0.5);
+      background: #E4E7EC;
       width: 10px;
       height: 10px;
       border-radius: 50%;
       margin: 0 5px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
     }
-
+    
     .swiper-pagination-bullet-active {
       background: #ff5c00;
-    }
+      width: 40px;
+      height: 10px;    
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }    
   }
 }
 
@@ -360,11 +380,12 @@ html {
 .spotlight-card {
   display: flex;
   /*background: #1a1a1a;*/
-  padding: 1.5rem;
+  padding-top: 0 !important;
+  padding: 1.5rem 0rem 1.5rem 0rem;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   margin: auto;
   text-align: left;
   align-items: stretch;
@@ -375,7 +396,6 @@ html {
   }
 
   .spotlight-image {
-    flex: 0 0 200px;  /* Largeur fixe (exemple 200px) ou flex: 1 si vous voulez qu'elle prenne un pourcentage */
     background: repeating-linear-gradient(
       45deg,
       #333,
@@ -387,10 +407,10 @@ html {
   }
 
   .spotlight-image {
-    flex: 1;      /* l'image prend tout l'espace possible */
+    flex: 1;
   }
   .spotlight-content {
-    flex: 1;      /* le texte prend aussi tout l'espace possible */
+    flex: 1;
   }
   
 
@@ -402,7 +422,7 @@ html {
 
       color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
       font-family: var(--font-family-Font-1, Inter);
-      font-size: var(--font-size-50, 1.5rem);
+      font-size: var(--font-size-50, 1.8rem);
       font-style: normal;
       font-weight: var(--font-weight-700, 700);
       letter-spacing: var(--letter-spacing--2, -1px);
@@ -443,7 +463,7 @@ html {
    Resource Spotlight Section
 =============================== */
 .resource-spotlight-section {
-  padding: 3rem 0;
+  padding: 4rem 12rem;
   text-align: center;
 }
 

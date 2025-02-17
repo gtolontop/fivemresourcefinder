@@ -59,13 +59,14 @@ const Home: React.FC = () => {
       </section>
 
       {/* Creator Spotlight Section */}
-        <SpotlightCarousel />
-
+      <SpotlightCarousel />
 
       {/* Resource Spotlight Section */}
       <section className="resource-spotlight-section">
-        <h2>Resource Spotlight</h2>
-        <p>Description blabla</p>
+        <div className="resource-header">
+          <h2>Resource Spotlight</h2>
+          <p>Description blabla</p>
+        </div>
         <div className="resource-grid">
           {resources.slice(0, 6).map((resource, index) => (
             <ResourceCard key={index} resource={resource} />

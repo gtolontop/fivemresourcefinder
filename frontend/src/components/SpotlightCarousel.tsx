@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from "react";
 
 interface Card {
   title: string;
   description: string;
   buttonText: string;
-  theme: 'theme1' | 'theme2';
+  theme: "theme1" | "theme2";
 }
 
 interface SlideData {
@@ -15,37 +15,93 @@ const slidesData: SlideData[] = [
   {
     cards: [
       {
-        title: 'Spotlight Slot 1',
+        title: "Spotlight Slot 1",
         description:
-          'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
-        buttonText: 'Buy Me',
-        theme: 'theme1',
+          "Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!",
+        buttonText: "Buy Me",
+        theme: "theme1",
       },
       {
-        title: 'Spotlight Slot 2',
+        title: "Spotlight Slot 2",
         description:
-          'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
-        buttonText: 'Buy Me',
-        theme: 'theme2',
+          "Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!",
+        buttonText: "Buy Me",
+        theme: "theme2",
       },
     ],
   },
-  /*{
+  {
     cards: [
       {
-        title: 'Spotlight Slot 3',
+        title: "Spotlight Slot 3",
         description:
-          'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
-        buttonText: 'Buy Me',
+          "Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!",
+        buttonText: "Buy Me",
+        theme: "theme1",
       },
       {
-        title: 'Spotlight Slot 4',
+        title: "Spotlight Slot 4",
         description:
-          'Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!',
-        buttonText: 'Buy Me',
+          "Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!",
+        buttonText: "Buy Me",
+        theme: "theme2",
       },
     ],
-  },*/
+  },
+  {
+    cards: [
+      {
+        title: "Spotlight Slot 5",
+        description:
+          "Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!",
+        buttonText: "Buy Me",
+        theme: "theme1",
+      },
+      {
+        title: "Spotlight Slot 6",
+        description:
+          "Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!",
+        buttonText: "Buy Me",
+        theme: "theme2",
+      },
+    ],
+  },
+  {
+    cards: [
+      {
+        title: "Spotlight Slot 7",
+        description:
+          "Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!",
+        buttonText: "Buy Me",
+        theme: "theme1",
+      },
+      {
+        title: "Spotlight Slot 8",
+        description:
+          "Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!",
+        buttonText: "Buy Me",
+        theme: "theme2",
+      },
+    ],
+  },
+  {
+    cards: [
+      {
+        title: "Spotlight Slot 9",
+        description:
+          "Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!",
+        buttonText: "Buy Me",
+        theme: "theme1",
+      },
+      {
+        title: "Spotlight Slot 10",
+        description:
+          "Promote your resource here for maximum visibility and reach. Perfect for creators looking to stand out!",
+        buttonText: "Buy Me",
+        theme: "theme2",
+      },
+    ],
+  },
 ];
 
 const SpotlightSection: React.FC = () => {
@@ -79,18 +135,23 @@ const SpotlightSection: React.FC = () => {
     <section className="spotlight-section">
       <div className="container">
         {/* Titre principal et description */}
-        <h2 className="spotlight-title">Creator Spotlight</h2>
-        <p className="spotlight-description">
-          Showcase your resource to a broader audience! This space is dedicated
-          to highlighting your work right on our website's front page.
-        </p>
+        <div className="spotlight-header">
+          <h2 className="spotlight-title">Creator Spotlight</h2>
+          <p className="spotlight-description">
+            Showcase your resource to a broader audience! This space is
+            dedicated to highlighting your work right on our website's front
+            page.
+          </p>
+        </div>
 
         {/* Slider */}
         <div className="spotlight-slider">
           <div
             className="spotlight-slider-wrapper"
             style={{
-              transform: `translateX(-${currentIndex * (100 / slidesPerView)}%)`,
+              transform: `translateX(-${
+                currentIndex * (100 / slidesPerView)
+              }%)`,
             }}
           >
             {slidesData.map((slide, index) => (
@@ -102,7 +163,7 @@ const SpotlightSection: React.FC = () => {
                 <div className="slide-content">
                   <div className="slide-right">
                     {slide.cards.map((card, cardIndex) =>
-                      card.theme === 'theme1' ? (
+                      card.theme === "theme1" ? (
                         <div className="spotlight-card" key={cardIndex}>
                           <div className="spotlight-image" />
                           <div className="spotlight-content">
@@ -115,7 +176,6 @@ const SpotlightSection: React.FC = () => {
                         </div>
                       ) : (
                         <div className="spotlight-card" key={cardIndex}>
-                          <div className="spotlight-image" />
                           <div className="spotlight-content">
                             <h3>{card.title}</h3>
                             <p>{card.description}</p>
@@ -123,6 +183,7 @@ const SpotlightSection: React.FC = () => {
                               {card.buttonText}
                             </button>
                           </div>
+                          <div className="spotlight-image" />
                         </div>
                       )
                     )}
@@ -146,7 +207,9 @@ const SpotlightSection: React.FC = () => {
               <span
                 key={index}
                 className={`swiper-pagination-bullet ${
-                  index === currentIndex ? 'swiper-pagination-bullet-active' : ''
+                  index === currentIndex
+                    ? "swiper-pagination-bullet-active"
+                    : ""
                 }`}
                 onClick={() => setCurrentIndex(index)}
               />
