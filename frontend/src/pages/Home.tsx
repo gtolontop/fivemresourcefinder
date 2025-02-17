@@ -64,20 +64,30 @@ const Home: React.FC = () => {
       {/* Resource Spotlight Section */}
       <section className="resource-spotlight-section">
         <div className="resource-header">
-          <h2>Resource Spotlight</h2>
-          <p>Description blabla</p>
+          <h2 className="resource-title">Resource Spotlight</h2>
+          <p className="resource-description">Discover standout resources crafted with care by talented developers to elevate your experience!</p>
         </div>
         <div className="resource-grid">
           {resources.slice(0, 6).map((resource, index) => (
             <ResourceCard key={index} resource={resource} />
           ))}
         </div>
+        <div className="view-all-container">
         <button
           className="view-all-button"
           onClick={() => (window.location.href = "/resources")}
         >
           View All
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+  <path d="M5 12.0811H19H5Z" fill="white"/>
+  <path d="M5 12.0811H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13 18.0811L19 12.0811L13 18.0811Z" fill="white"/>
+  <path d="M13 18.0811L19 12.0811" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13 6.08105L19 12.0811L13 6.08105Z" fill="white"/>
+  <path d="M13 6.08105L19 12.0811" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
         </button>
+        </div>
       </section>
 
       {/* Reviews Section */}
