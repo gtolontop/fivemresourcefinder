@@ -477,7 +477,7 @@ p {
     flex: 1 0 0;
 
     h3 {
-      color: var(--fivemresourcefinder-White, var(--color-white-solid, #FFF));
+      color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
 
       /* fivemresourcefinder/Semantic/Heading 1 */
       font-family: var(--font-family-Font-1, Inter);
@@ -490,7 +490,7 @@ p {
 
     p {
       margin-bottom: 0.5rem;
-      color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #EBEBEB));
+      color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
 
       /* fivemresourcefinder/Semantic/Heading 2 */
       font-family: var(--font-family-Font-1, Inter);
@@ -514,12 +514,13 @@ p {
         0px 13.647px 13.647px -3.125px rgba(0, 0, 0, 0.11),
         0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);
       border: none;
-display: flex;
-height: 40px;
-padding: 10.71px 15px 11.59px 15px;
-justify-content: center;
-align-items: center;
-flex: 1 0 0;      color: #fff;
+      display: flex;
+      height: 40px;
+      padding: 10.71px 15px 11.59px 15px;
+      justify-content: center;
+      align-items: center;
+      flex: 1 0 0;
+      color: #fff;
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
@@ -546,34 +547,52 @@ flex: 1 0 0;      color: #fff;
    Resource Spotlight Section
 =============================== */
 .resource-spotlight-section {
-  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  background: #0e0e0e;
+  color: #fff;
   display: flex;
   padding: 100px 560px 50px 560px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 40px;  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
   text-align: center;
+  width: 100%;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .spotlight-title {
+    color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
+    font-family: var(--font-family-Font-1, Inter);
+    font-size: var(--font-size-50, 50px);
+    font-style: normal;
+    font-weight: var(--font-weight-700, 700);
+    line-height: var(--line-height-60, 60px); /* 120% */
+    letter-spacing: var(--letter-spacing--2_6, -2.6px);
+  }
+
+  .spotlight-description {
+    text-align: left;
+    color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
+    font-family: var(--font-family-Font-1, Inter);
+    font-size: var(--font-size-24, 24px);
+    font-style: normal;
+    font-weight: var(--font-weight-500, 500);
+    line-height: var(--line-height-36, 36px); /* 150% */
+    letter-spacing: var(--letter-spacing--0_5, -0.5px);
+    margin-bottom: 2rem;
+  }
 }
 
-/* Titre principal */
-.resource-spotlight-section h2 {
-  margin-bottom: 0.5rem;
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-}
-
-/* Sous-titre */
-.resource-description {
-  margin-bottom: 2rem;
-  text-align: center;
-  font-size: 18px;
-  color: #bbb;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /* Conteneur de la grille (exactement 3 cartes par ligne, centrées) */
 .resource-grid {
@@ -584,18 +603,18 @@ flex: 1 0 0;      color: #fff;
   margin: 0 auto; /* Centre la grille */
 }
 
-/* Carte individuelle */
 .resource-card {
-  background: #222;
   padding: 1.5rem;
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-  width: 100%; /* Cartes bien proportionnées */
-  max-width: 250px; /* Taille ajustée */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%;
+  display: flex;
+  width: 226.67px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--item-spacing-30, 30px);  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -622,21 +641,28 @@ flex: 1 0 0;      color: #fff;
 /* Titre de la carte */
 .resource-card h3 {
   margin-top: 1rem;
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
+  color: var(--fivemresourcefinder-White, var(--color-white-solid, #FFF));
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: var(--font-size-24, 24px);
+  font-style: normal;
+  font-weight: var(--font-weight-700, 700);
+  line-height: var(--line-height-36, 36px); /* 150% */
+  letter-spacing: var(--letter-spacing--0_8, -0.8px);
 }
 
 /* Texte de description */
 .resource-card p {
-  color: #bbb;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  max-width: 90%;
+  color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #EBEBEB));
+
+  /* fivemresourcefinder/Semantic/Heading 3 */
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: var(--opacity-20, 20px);
+  font-style: normal;
+  font-weight: var(--font-weight-500, 500);
+  line-height: var(--line-height-28, 28px); /* 140% */
+  letter-spacing: var(--letter-spacing--0_5, -0.5px);
 }
 
-/* Conteneur du bouton */
 .view-all-container {
   display: flex;
   justify-content: center;
@@ -644,7 +670,6 @@ flex: 1 0 0;      color: #fff;
   margin-top: 2rem;
 }
 
-/* Bouton View All */
 .view-all-button {
   display: flex;
   justify-content: center;
@@ -660,9 +685,31 @@ flex: 1 0 0;      color: #fff;
   transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
-.view-all-button:hover {
-  background: linear-gradient(180deg, #e04e00 0%, #7a2c00 100%);
-  transform: scale(1.05);
+.resource-card .resource-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  background: repeating-linear-gradient(
+    45deg,
+    #333,
+    #333 10px,
+    #444 10px,
+    #444 20px
+  );
+  /* Pour un <div>, object-fit ne fonctionne pas, 
+     mais si c’est un <img>, ça sert à remplir le conteneur */
+  object-fit: cover;
+}
+
+.resource-card .resource-image.placeholder {
+  /* Par exemple, tu peux foncer le motif ou ajouter un petit texte */
+  background: repeating-linear-gradient(
+    45deg,
+    #222,
+    #222 10px,
+    #444 10px,
+    #444 20px
+  );
 }
 
 /* Responsiveness : Ajustement sur les petits écrans */
