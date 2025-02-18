@@ -138,9 +138,7 @@ const SpotlightSection: React.FC = () => {
         <div className="spotlight-header">
           <h2 className="spotlight-title">Creator Spotlight</h2>
           <p className="spotlight-description">
-            Showcase your resource to a broader audience! This space is
-            dedicated to highlighting your work right on our website's front
-            page.
+          Check out our featured resources! These are premium placements showcasing top-tier creations available for the community.
           </p>
         </div>
 

@@ -127,7 +127,8 @@ const Home: React.FC = () => {
       {/* Reviews Section */}
       <section className="reviews-section">
         <h2>What Our Users Say</h2>
-        <p>Description blabla</p>
+        <p>Here you can read some of our reviews from the community. Get insights into how we’ve been rated and what others think about us!
+        </p>
         <div className="reviews-container">
           <div className="reviews-box">
             <ReviewCard
