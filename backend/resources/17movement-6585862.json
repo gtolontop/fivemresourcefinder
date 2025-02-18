@@ -1,0 +1,62 @@
+{
+  "title": "**__Job Center (City Hall)__**",
+  "description": "**Description:**\n*A cutting-edge system for managing jobs and businesses. Players browse customizable job tiles with stats like earnings and difficulty, while business owners personalize their company profiles. A multiplayer chat connects job seekers and employers, creating a dynamic and interactive ecosystem.*",
+  "url": "https://17movement.net/scripts/6585862",
+  "color": 3092790,
+  "fields": [
+    {
+      "name": "💰 **Price**",
+      "value": "`19.99$`",
+      "inline": true
+    },
+    {
+      "name": "👤 **Creator**",
+      "value": "*MuDzYn*",
+      "inline": true
+    },
+    {
+      "name": "🛠️ **Features**",
+      "value": "• **Our new system is a comprehensive solution for players that introduces innovative functions for managing work, businesses, and facilitating interactions between users.**\n• **The job menu allows players to browse available professions in the form of tiles. Each tile can include:**\n• **All statistics are configurable, with the option to hide selected ones.**\n• **Players can easily browse available jobs, and clicking on a tile expands a detailed description with information about tasks and requirements.**",
+      "inline": false
+    },
+    {
+      "name": "🔗 **Dependencies**",
+      "value": "*The business section allows company owners to present their businesses through the personalization of their tile – including a custom background image and a player-editable description.*",
+      "inline": false
+    },
+    {
+      "name": "⚙️ **How It Works**",
+      "value": "• *We have introduced a special chat for players looking for work in multiplayer mode. Messages are automatically signed with the character's name and surname.*\n• *Even if it took the team to respond in the beginning i absolutely cant complain about the further support. Friendly and professional. I loved the fact that i was able to get support about a different subject, even after my original question was answered. I didnt have to open another ticket, which was really comfortable. Ill have no doubts about contacting the support again. Thank you*",
+      "inline": false
+    },
+    {
+      "name": "✅ **Compatibilities**",
+      "value": "*ESX,QBCore,STANDALONE*",
+      "inline": false
+    },
+    {
+      "name": "⭐ **Reviews**",
+      "value": "**Review #1: psykhomunkey**\nVery helpful and professional. I have 3 scripts so far and looking at more in the future. Keep up the great work!\n\n**Review #2: bigchue1**\nHad a couple questions before I bought a script. And they provided me with the information I needed to move forward in my decision to purchase. Big help! Thanks! 💯\n\n**Review #3: kimmygames1111**\nHelp is no longer needed. A programmer will install everything for me and find out whats going on. Thanks\n\n**Review #4: bmwlife_n54**\nGreat customer service . I cant wait to use the scripts they look great.\n\n**Review #5: whalesmustache**\nQuick to help and always a pleasure talking to these folks!\n",
+      "inline": false
+    },
+    {
+      "name": "📄 **Documentation**",
+      "value": "[Link here](https://docs.17movement.net/)",
+      "inline": false
+    },
+    {
+      "name": "💬 **Discord**",
+      "value": "[Discord Server](https://discord.gg/cbdkQfseH3)",
+      "inline": false
+    }
+  ],
+  "footer": {
+    "text": "Powered by FiveM ResourceFinder"
+  },
+  "image": {
+    "url": "https://17movement.net/_next/image?url=https%3A%2F%2F17movement.net%2Fassets%2Fscreenshots%2Fjob_center%2Fmain_screen_2.webp&w=1080&q=100"
+  },
+  "thumbnail": {
+    "url": "https://17movement.net/_next/image?url=https%3A%2F%2F17movement.net%2Fassets%2Fscreenshots%2Fjob_center%2Fmain_screen_2.webp&w=1080&q=100"
+  }
+}
