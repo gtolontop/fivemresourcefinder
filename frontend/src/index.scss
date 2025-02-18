@@ -270,6 +270,15 @@ html {
   background: #0e0e0e;
   color: #fff;
   padding: 4rem 12rem;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  width: 100%;
 
   .container {
     max-width: 1200px;
@@ -277,19 +286,31 @@ html {
   }
 
   .spotlight-title {
-    font-size: 2rem;
-    font-weight: bold;
+    color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
+    font-family: var(--font-family-Font-1, Inter);
+    font-size: var(--font-size-50, 50px);
+    font-style: normal;
+    font-weight: var(--font-weight-700, 700);
+    line-height: var(--line-height-60, 60px); /* 120% */
+    letter-spacing: var(--letter-spacing--2_6, -2.6px);
   }
 
   .spotlight-description {
-    font-size: 1rem;
+    text-align: left;
+    color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
+    font-family: var(--font-family-Font-1, Inter);
+    font-size: var(--font-size-24, 24px);
+    font-style: normal;
+    font-weight: var(--font-weight-500, 500);
+    line-height: var(--line-height-36, 36px); /* 150% */
+    letter-spacing: var(--letter-spacing--0_5, -0.5px);
     margin-bottom: 2rem;
   }
 }
 
 .spotlight-header {
   display: flex;
-  padding: 0 11.86rem;
+  padding: 0 10rem;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -297,7 +318,7 @@ html {
 
 .resource-header {
   display: flex;
-  padding: 0 15rem;
+  padding: 0 15.1rem;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -363,7 +384,7 @@ p {
     transform: translateY(-50%);
     background: transparent;
     border: none;
-    color: #E4E7EC;
+    color: #e4e7ec;
     font-size: 20px;
     cursor: pointer;
     z-index: 10;
@@ -388,7 +409,7 @@ p {
     margin-top: 1rem;
 
     .swiper-pagination-bullet {
-      background: #E4E7EC;
+      background: #e4e7ec;
       width: 10px;
       height: 10px;
       border-radius: 50%;
@@ -396,14 +417,14 @@ p {
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    
+
     .swiper-pagination-bullet-active {
       background: #ff5c00;
       width: 40px;
-      height: 10px;    
+      height: 10px;
       border-radius: 20px;
       transition: all 0.3s ease;
-    }    
+    }
   }
 }
 
@@ -412,13 +433,17 @@ p {
 =============================== */
 .spotlight-card {
   display: flex;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0px var(--item-spacing-80, 80px);
+  flex-wrap: wrap;
   /*background: #1a1a1a;*/
   padding-top: 0 !important;
-  padding: 1.5rem 0rem 1.5rem 0rem;
+  padding: 1.5rem 0rem 2.5rem 0rem;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-  width: 100%;
-  max-width: 550px;
   margin: auto;
   text-align: left;
   align-items: stretch;
@@ -437,47 +462,64 @@ p {
       #222 20px
     );
     border-radius: 10px;
+    width: 360px;
+    height: 300px;
+    flex-shrink: 0;
   }
-
-  .spotlight-image {
-    flex: 1;
-  }
-  .spotlight-content {
-    flex: 1;
-  }
-  
 
   .spotlight-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--item-spacing-20, 20px);
+    flex: 1 0 0;
 
     h3 {
-      margin-bottom: 0.5rem;
+      color: var(--fivemresourcefinder-White, var(--color-white-solid, #FFF));
 
-      color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
+      /* fivemresourcefinder/Semantic/Heading 1 */
       font-family: var(--font-family-Font-1, Inter);
-      font-size: var(--font-size-50, 1.8rem);
+      font-size: var(--font-size-50, 50px);
       font-style: normal;
       font-weight: var(--font-weight-700, 700);
-      letter-spacing: var(--letter-spacing--2, -1px);
+      line-height: var(--line-height-60, 60px); /* 120% */
+      letter-spacing: var(--letter-spacing--2, -2px);
     }
 
     p {
       margin-bottom: 0.5rem;
-      color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
+      color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #EBEBEB));
+
+      /* fivemresourcefinder/Semantic/Heading 2 */
       font-family: var(--font-family-Font-1, Inter);
-      font-size: var(--font-size-24, 1rem);
+      font-size: var(--font-size-24, 24px);
       font-style: normal;
       font-weight: var(--font-weight-500, 500);
-      line-height: var(--line-height-36, 24px); /* 150% */
+      line-height: var(--line-height-36, 36px); /* 150% */
       letter-spacing: var(--letter-spacing--0_5, -0.5px);
     }
 
     .spotlight-button {
       border-radius: 8px;
-      background: var(--color-text-small, linear-gradient(180deg, #FF5C00 0%, #993700 100%));
-      box-shadow: 0px 0.707px 0.707px -0.625px rgba(0, 0, 0, 0.15), 0px 1.807px 1.807px -1.25px rgba(0, 0, 0, 0.14), 0px 3.622px 3.622px -1.875px rgba(0, 0, 0, 0.14), 0px 6.866px 6.866px -2.5px rgba(0, 0, 0, 0.13), 0px 13.647px 13.647px -3.125px rgba(0, 0, 0, 0.11), 0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);      border: none;
-      padding: 10px 20px;
-      color: #fff;
+      background: var(
+        --color-text-small,
+        linear-gradient(180deg, #ff5c00 0%, #993700 100%)
+      );
+      box-shadow: 0px 0.707px 0.707px -0.625px rgba(0, 0, 0, 0.15),
+        0px 1.807px 1.807px -1.25px rgba(0, 0, 0, 0.14),
+        0px 3.622px 3.622px -1.875px rgba(0, 0, 0, 0.14),
+        0px 6.866px 6.866px -2.5px rgba(0, 0, 0, 0.13),
+        0px 13.647px 13.647px -3.125px rgba(0, 0, 0, 0.11),
+        0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);
+      border: none;
+display: flex;
+height: 40px;
+padding: 10.71px 15px 11.59px 15px;
+justify-content: center;
+align-items: center;
+flex: 1 0 0;      color: #fff;
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
@@ -486,113 +528,161 @@ p {
 
       &:hover {
         border-radius: 8px;
-        background: var(--color-text-small, linear-gradient(180deg, #ff5e00c9 0%, #993800b6 100%));
-        box-shadow: 0px 0.707px 0.707px -0.625px rgba(0, 0, 0, 0.15), 0px 1.807px 1.807px -1.25px rgba(0, 0, 0, 0.14), 0px 3.622px 3.622px -1.875px rgba(0, 0, 0, 0.14), 0px 6.866px 6.866px -2.5px rgba(0, 0, 0, 0.13), 0px 13.647px 13.647px -3.125px rgba(0, 0, 0, 0.11), 0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);      }
+        background: var(
+          --color-text-small,
+          linear-gradient(180deg, #ff5e00c9 0%, #993800b6 100%)
+        );
+        box-shadow: 0px 0.707px 0.707px -0.625px rgba(0, 0, 0, 0.15),
+          0px 1.807px 1.807px -1.25px rgba(0, 0, 0, 0.14),
+          0px 3.622px 3.622px -1.875px rgba(0, 0, 0, 0.14),
+          0px 6.866px 6.866px -2.5px rgba(0, 0, 0, 0.13),
+          0px 13.647px 13.647px -3.125px rgba(0, 0, 0, 0.11),
+          0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);
+      }
     }
   }
 }
-
 /* ============================
    Resource Spotlight Section
 =============================== */
 .resource-spotlight-section {
-  padding: 4rem 12rem;
+  padding: 4rem 0;
+  display: flex;
+  padding: 100px 560px 50px 560px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
   text-align: center;
 }
 
+/* Titre principal */
 .resource-spotlight-section h2 {
   margin-bottom: 0.5rem;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
 }
 
+/* Sous-titre */
 .resource-description {
   margin-bottom: 2rem;
-  text-align: left;
+  text-align: center;
+  font-size: 18px;
+  color: #bbb;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.resource-spotlight-section p {
-  margin-bottom: 2rem;
-}
-
+/* Conteneur de la grille (exactement 3 cartes par ligne, centrées) */
 .resource-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem;
+  grid-template-columns: repeat(3, 1fr); /* Toujours 3 cartes par ligne */
+  gap: 2rem; /* Espacement uniforme entre les cartes */
+  max-width: 900px; /* Largeur maximale de la grille */
+  margin: 0 auto; /* Centre la grille */
 }
 
+/* Carte individuelle */
 .resource-card {
-  text-align: left;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 10px;
   display: flex;
-  width: 226.67px;
   flex-direction: column;
-  gap: var(--item-spacing-30, 30px);
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Cartes bien proportionnées */
+  max-width: 250px; /* Taille ajustée */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*.resource-card:hover {
+.resource-card:hover {
   transform: translateY(-5px);
-}*/
+  box-shadow: 0 6px 12px rgba(255, 92, 0, 0.3);
+}
 
+/* Image dans la carte */
 .resource-card img.resource-image {
   width: 100%;
-  height: 226px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  background: repeating-linear-gradient(
+    45deg,
+    #333,
+    #333 10px,
+    #444 10px,
+    #444 20px
+  ); /* Motif pour placeholder */
 }
 
+/* Titre de la carte */
 .resource-card h3 {
-  margin-bottom: 0.5rem;
-  color: var(--fivemresourcefinder-White, var(--color-white-solid, #FFF));
-  font-family: var(--font-family-Font-1, Inter);
-  font-size: var(--font-size-24, 24px);
-  font-style: normal;
-  font-weight: var(--font-weight-700, 700);
-  line-height: var(--line-height-36, 36px); /* 150% */
-  letter-spacing: var(--letter-spacing--0_8, -0.8px);
+  margin-top: 1rem;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
 }
 
+/* Texte de description */
 .resource-card p {
-  color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #EBEBEB));
-  font-family: var(--font-family-Font-1, Inter);
-  font-size: var(--opacity-20, 20px);
-  font-style: normal;
-  font-weight: var(--font-weight-500, 500);
-  line-height: var(--line-height-28, 28px); /* 140% */
-  letter-spacing: var(--letter-spacing--0_5, -0.5px);
+  color: #bbb;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  max-width: 90%;
 }
+
+/* Conteneur du bouton */
 .view-all-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 
+/* Bouton View All */
 .view-all-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-  padding: 1px 27px;
-  height: 50px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
   border: none;
   cursor: pointer;
-  color: var(--fivemresourcefinder-White, var(--color-white-solid, #FFF));
-  text-align: center;
-  font-family: var(--font-family-Font-1, "Plus Jakarta Sans");
-  font-size: var(--font-size-18, 18px);
-  font-style: normal;
-  font-weight: var(--font-weight-600, 600);
-  line-height: var(--font-size-18, 18px);
-  transition: background 0.3s;
-  border-radius: 15px;
-  background: var(--color-text-small, linear-gradient(180deg, #FF5C00 0%, #993700 100%));
+  background: linear-gradient(180deg, #ff5c00 0%, #993700 100%);
+  color: white;
+  transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
 .view-all-button:hover {
   background: linear-gradient(180deg, #e04e00 0%, #7a2c00 100%);
+  transform: scale(1.05);
 }
 
+/* Responsiveness : Ajustement sur les petits écrans */
+@media (max-width: 1024px) {
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne sur tablette */
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resource-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 carte par ligne sur mobile */
+    max-width: 90%;
+  }
+
+  .resource-card {
+    width: 100%; /* Cartes plus grandes sur mobile */
+  }
+}
 
 /* ============================
    Reviews Section
