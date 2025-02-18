@@ -86,7 +86,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource }) => {
   const cleanedTitle = truncateText(cleanText(rawTitle), 22);
 
   const rawDescription = resource.description || '';
-  const cleanedDescription = truncateText(cleanText(rawDescription), 100);
+  const cleanedDescription = truncateText(cleanText(rawDescription), 70);
 
   return (
     <div className="resource-card">
