@@ -175,19 +175,23 @@ const Home: React.FC = () => {
         <h2>Trusted By</h2>
         <div className="partner-logos">
           <PartnerLogo
-            logoUrl="https://via.placeholder.com/150"
+            logoUrl="https://s3-alpha-sig.figma.com/img/5d5a/8edb/035ce8de1f6364000dbbcf9bfe6117b7?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iUKyqZteJsofxrICZOzOi-wwL3VjyCubmf0Hhi5DzxdcmDPceBmXGj4kDwcwK--YXH0NS~DsfQ0EvuSHT0kQm~YE1uOsF30~KyFAhO0YhsN16TnHGsHAaXcRkNFlp2qIQKz~ptzU6p0GGvowfJwtjZ5LwlWUO6M5Ya3nBKz~MKvxczED8wmg-dRrwVy5qgO43xaFAxqQ-gLAOl2Rdbne4syQEwb4qTaxI4MbVJSWHb7scN2HXcy-ivZ2djo-PbIq9NSvYHQJ5zng7cbNidwJDekiYDjMaZZr~BzGGxjwz-lQFRx-NG7vOKnD2Cpj37HvJMj4uoLqHDym5UGjvgT1UQ__"
             altText="Partner 1"
           />
           <PartnerLogo
-            logoUrl="https://via.placeholder.com/150"
+            logoUrl="https://s3-alpha-sig.figma.com/img/b4cc/2504/574f425b832cc85294b94d23cb94d546?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ntf6~g5QRyUwXQ8hb7yxkRyOfdiZ4Xtb0c4v8a8LmJd7dXYtObhU0RyAMiQ6pz7zklZf4xcI~~L2Ppw~EgyiOL9CZfk1kWL9rmqfZZAABpvmAzlV-V7q3t3T7a5Q307xyWugT6nlaMQ1DSYC2U6iFBMtXVLt9UB6O8peO3X1FMRXAUK2-Uu6CUv0zbgUFSRPVBvC2v81FNJc9Ea~1yifM15zmbylM6iKaREZiiL1Kqhqf8Fw4f27mshNhJZusFCdunn37WXd-T1MdUAT5O2UP81P6U0a1vJ~7Aqhi33lLSOK2u8Qn0FMIGxjFaMXOdEH5qZ6v1VD2Ffr6hDUKAQmyw__"
             altText="Partner 2"
           />
           <PartnerLogo
-            logoUrl="https://via.placeholder.com/150"
+            logoUrl="https://s3-alpha-sig.figma.com/img/32ed/7a49/e57f13f0f28f7de6b3ea1f385de15699?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Vjtfl3TD~ZJ43KANMe3JBOsLQI4giyKo3JtFJbkyDLKbh8QG-jhUiSbG5fwzINeX1KnfZPO8H1vbiypK5x1N2E4I7KtHqOq0NX9XYucQ6HEXIO89S7Yz5OknAkDDrfscFajGfEI38Sk66mew7PUGWV~GEcMABZmXagrmJYlgCcFQQSoD2KgJss~qJv0sw6F~MXmZ-wUPgBAHifmNNxKBYIThsq~bmNc9yR1MfVc7QBMZaOTY0aDViC30DrkeqCruOj1Nrtx3eqsyLQv7hKDPSbnRcK5~3WRDxZFk9z1Vpj~qbPYOQC8~eehmEyJYO3BOC6NIisDQhUuYhc-YhIiUDw__"
             altText="Partner 3"
           />
           <PartnerLogo
-            logoUrl="https://via.placeholder.com/150"
+            logoUrl="https://s3-alpha-sig.figma.com/img/7047/df3e/20f967244c821f2576967816d5377d48?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=QSiylDgS5u9RuqnRmWNoRB0v9rtkFRNkIf7Za25w9K8x-HAGaOQ5Wc1VwbvfStgYu4mXeu69Uq70izyNWfXD2KlPOM4TAyxoiUKIRlZKI3W7yyr4YH4Yq9sNI2Q3ccd8WTxQcvN7dKOOel1mBSG7K~oAIhB6ShdaD3ICw6NSYlkvCr3KRDusNMf3ybIahDmk84KGR~1G49kNWsBMgS6oRbvh-9K~aoOf45sOCnmxI61TH8plF74L80ZKBk2A4v7-bIMNwswXIYtTf1fTQzK2QE~zwsLnunbtzMhtvyBXGxksB9hBI914gMxrXsFyJDGwz4CDMojdnv~BLvkTPnNvcQ__"
+            altText="Partner 4"
+          />
+                    <PartnerLogo
+            logoUrl="https://s3-alpha-sig.figma.com/img/5d5a/8edb/035ce8de1f6364000dbbcf9bfe6117b7?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iUKyqZteJsofxrICZOzOi-wwL3VjyCubmf0Hhi5DzxdcmDPceBmXGj4kDwcwK--YXH0NS~DsfQ0EvuSHT0kQm~YE1uOsF30~KyFAhO0YhsN16TnHGsHAaXcRkNFlp2qIQKz~ptzU6p0GGvowfJwtjZ5LwlWUO6M5Ya3nBKz~MKvxczED8wmg-dRrwVy5qgO43xaFAxqQ-gLAOl2Rdbne4syQEwb4qTaxI4MbVJSWHb7scN2HXcy-ivZ2djo-PbIq9NSvYHQJ5zng7cbNidwJDekiYDjMaZZr~BzGGxjwz-lQFRx-NG7vOKnD2Cpj37HvJMj4uoLqHDym5UGjvgT1UQ__"
             altText="Partner 4"
           />
         </div>
