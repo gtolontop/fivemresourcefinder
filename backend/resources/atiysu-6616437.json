@@ -3,6 +3,9 @@
     "description": "**Description :**\n*Take your FiveM server experience to the next level with our innovative Business Management Script, now available on the Tebex Store. This feature-packed script allows players to own and operate businesses, craft items, and manage workers while offering seamless integration with your existing server features.*",
     "url": "https://atiysu.tebex.io/package/6616437",
     "color": 3092790,
+    "image": {
+      "url": "https://dunb17ur4ymx4.cloudfront.net/packages/images/12bfb481794e7bf1879339e7c339e2cfe8186e5b.png"
+    },
     "fields": [
       {
         "name": "💰 **Price**",
