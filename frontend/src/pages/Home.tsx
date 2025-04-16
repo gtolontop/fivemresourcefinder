@@ -150,6 +150,7 @@ const Home: React.FC = () => {
       {/* FAQ Section */}
       <section className="faq-section fade-in">
         <h2>FAQ</h2>
+        <div>
         <FAQItem
           question="What is FiveM ResourceFinder?"
           answer="It is a platform to find FiveM resources."
@@ -158,6 +159,7 @@ const Home: React.FC = () => {
           question="How do I add my resource?"
           answer="Please contact us via Discord."
         />
+        </div>
       </section>
 
       {/* Trusted By Section */}

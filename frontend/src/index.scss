@@ -932,13 +932,13 @@ p {
   justify-content: center;
   align-items: center;
   padding: 100px 460px 50px 460px;
-  background: var(--fivemresourcefinder-Mine-Shaft, #0e0e0e);
+  background: var(--fivemresourcefinder-Mine-Shaft, #17171c);
   text-align: center;
   width: 100%;
 }
 
 .faq-section h2 {
-  color: var(--fivemresourcefinder-White, #FFF);
+  color: var(--fivemresourcefinder-White, #fff);
   font-family: var(--font-family-Font-1, Inter);
   font-size: 50px;
   font-weight: 700;
@@ -947,60 +947,54 @@ p {
   margin-bottom: 30px;
 }
 
-.faq-container {
-  display: flex;
-  width: 1000px;
-  max-width: 1920px;
-  padding: 0 100px;
-  justify-content: center;
-  align-items: center;
-}
-
 .faq-list {
   display: flex;
-  padding: 0 20px;
   flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
+  width: 1000px;
+  max-width: 100%;
+  padding: 0 20px;
   border-radius: 20px;
   background: var(--color-grey-20, #333);
-  gap: 1px;
+  overflow: hidden;
 }
 
-.faq-item {
-  width: 100%;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
+.faq-item + .faq-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .faq-question {
   display: flex;
-  padding: 20px 40px;
   align-items: center;
-  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 40px;
   cursor: pointer;
-  width: 100%;
   background: transparent;
 }
 
-.faq-question p {
-  color: var(--fivemresourcefinder-Concrete, #F2F2F2);
-  font-family: var(--font-family-Font-1, Inter);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  margin: 0;
-  text-align: left;
-}
-
-.faq-icon {
-  width: 16px;
-  height: 16px;
+.faq-question .faq-icon {
   transition: transform 0.3s ease-in-out;
 }
 
-.faq-icon.open {
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.faq-question .faq-icon.open {
   transform: rotate(45deg);
+}
+
+.faq-question p {
+  flex: 1;
+  margin: 0;
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--fivemresourcefinder-Concrete, #f2f2f2);
+  display: flex;
+  align-items: center;
 }
 
 .faq-answer-wrapper {
@@ -1009,15 +1003,15 @@ p {
 }
 
 .faq-answer {
-  padding: 0px 40px 20px 40px;
+  padding: 0 40px 20px;
 }
 
 .faq-answer p {
-  color: #fff;
+  margin: 0;
   font-family: Inter;
   font-size: 16px;
   line-height: 24px;
-  margin: 0;
+  color: #fff;
 }
 
 /* ============================
