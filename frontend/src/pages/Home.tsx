@@ -81,8 +81,8 @@ const Home: React.FC = () => {
       {/* Creator Spotlight Section */}
       <div className="container">
           <div className="spotlightcreator-header">
-            <h2 className="spotlight-title">Spotlight of Resources</h2>
-            <p className="spotlight-description">
+            <h2 className="spotlightcreator-title">Spotlight of Resources</h2>
+            <p className="spotlightcreator-description">
               Showcase your resource to a broader audience! This space is
               dedicated to highlighting your work right on our website's front
               page.

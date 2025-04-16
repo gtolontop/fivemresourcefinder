@@ -483,6 +483,28 @@ p {
   align-items: flex-start;
 }
 
+.spotlightcreator-title {
+  color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: var(--font-size-50, 50px);
+  font-style: normal;
+  font-weight: var(--font-weight-700, 700);
+  line-height: var(--line-height-60, 60px); /* 120% */
+  letter-spacing: var(--letter-spacing--2_6, -2.6px);
+}
+
+.spotlightcreator-description {
+  text-align: left;
+  color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: var(--font-size-24, 24px);
+  font-style: normal;
+  font-weight: var(--font-weight-500, 500);
+  line-height: var(--line-height-36, 36px); /* 150% */
+  letter-spacing: var(--letter-spacing--0_5, -0.5px);
+  margin-bottom: 1rem;
+}
+
 /* ============================
    Card Layout
 =============================== */
