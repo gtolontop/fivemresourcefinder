@@ -12,13 +12,12 @@ const Home: React.FC = () => {
   const [resources, setResources] = useState<Resource[]>([]);
 
   useEffect(() => {
-    // Récupération initiale des ressources
+
     fetch("/api/resources")
       .then((res) => res.json())
       .then((data) => setResources(data))
       .catch((err) => console.error(err));
 
-    // Mise à jour toutes les 5 minutes
     const interval = setInterval(() => {
       fetch("/api/resources")
         .then((res) => res.json())
@@ -50,7 +49,6 @@ const Home: React.FC = () => {
   return (
     <div className="home-page">
       <NavBar />
-      {/* Hero Section */}
       <section
         className="hero-section"
         style={{
