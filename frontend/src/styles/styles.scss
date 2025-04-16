@@ -73,8 +73,8 @@ html {
 }
 
 /* ============================
-   NavBar
-=============================== */
+     NavBar
+  =============================== */
 .navbar {
   position: fixed;
   width: 100%;
@@ -159,8 +159,8 @@ html {
 }
 
 /* ============================
-   Footer
-=============================== */
+     Footer
+  =============================== */
 .footer {
   background: var(--fivemresourcefinder-Mine-Shaft, #222);
 }
@@ -308,8 +308,8 @@ html {
 }
 
 /* ============================
-   Hero Section
-=============================== */
+     Hero Section
+  =============================== */
 .hero-section {
   position: relative;
   height: 100vh;
@@ -426,8 +426,8 @@ html {
 }
 
 /* ============================
-   Section & Container
-=============================== */
+     Section & Container
+  =============================== */
 .spotlight-section {
   background: #0e0e0e;
   color: #fff;
@@ -523,8 +523,8 @@ p {
 }
 
 /* ============================
-   Slider
-=============================== */
+     Slider
+  =============================== */
 .spotlight-slider {
   position: relative;
   overflow: hidden;
@@ -625,8 +625,8 @@ p {
 }
 
 /* ============================
-   Card Layout
-=============================== */
+     Card Layout
+  =============================== */
 .spotlight-card {
   display: flex;
   width: 800px;
@@ -739,8 +739,8 @@ p {
   }
 }
 /* ============================
-   Resource Spotlight Section
-=============================== */
+     Resource Spotlight Section
+  =============================== */
 .resource-spotlight-section {
   display: flex;
   flex-direction: column;
@@ -810,8 +810,8 @@ p {
 }
 
 /*
-.resource-card:hover {
-}*/
+  .resource-card:hover {
+  }*/
 
 .resource-card img.resource-image {
   width: 100%;
@@ -1055,8 +1055,8 @@ p {
 }
 
 /* ============================
-   FAQ Section
-=============================== */
+     FAQ Section
+  =============================== */
 .faq-section {
   display: flex;
   flex-direction: column;
@@ -1157,8 +1157,8 @@ p {
 }
 
 /* ============================
-   Trusted By Section
-=============================== */
+     Trusted By Section
+  =============================== */
 .trusted-by-section {
   display: flex;
   padding: 100px 418px 50px 418px;
@@ -1202,8 +1202,8 @@ p {
 }
 
 /* ============================
-   Resources Page
-=============================== */
+     Resources Page
+  =============================== */
 .resources-page {
   padding-bottom: 2rem;
 }
@@ -1228,8 +1228,8 @@ p {
 }
 
 /* ============================
-   Store Page
-=============================== */
+     Store Page
+  =============================== */
 .store-page {
   padding-bottom: 2rem;
 }
@@ -1299,8 +1299,8 @@ p {
 }
 
 /* ============================
-   About, Login, Admin Pages
-=============================== */
+     About, Login, Admin Pages
+  =============================== */
 .about-page,
 .login-page,
 .admin-page {
@@ -1365,381 +1365,379 @@ button:hover,
 .store-card:hover img {
   transform: scale(1.03);
 }
-
-
 /* ============================
    Responsive Styles
 =============================== */
 
 /* Base responsive adjustments */
 @media (max-width: 1400px) {
-  .container {
-    width: 95%;
+    .container {
+      width: 95%;
+    }
+    
+    .navbar {
+      padding: 0.8rem 10rem;
+    }
+    
+    .footer-container,
+    .reviews-section,
+    .faq-section,
+    .trusted-by-section {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+    
+    .spotlight-header,
+    .resource-header,
+    .spotlightcreator-header,
+    .reviews-header {
+      padding: 0 5rem;
+    }
+    
+    .spotlight-section {
+      padding: 20rem 5rem;
+    }
+    
+    .spotlight-card {
+      width: 700px;
+    }
+    
+    .faq-list {
+      width: 100%;
+    }
   }
   
-  .navbar {
-    padding: 0.8rem 10rem;
+  /* Tablet styles */
+  @media (max-width: 992px) {
+    .navbar {
+      padding: 0.8rem 2rem;
+    }
+    
+    .navbar-container {
+      width: 95%;
+    }
+    
+    .nav-links {
+      width: auto;
+      gap: 15px;
+    }
+    
+    .nav-links a {
+      font-size: 16px;
+    }
+    
+    .hero-content h1 {
+      font-size: 70px;
+      line-height: 70px;
+    }
+    
+    .hero-content p {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 500px;
+    }
+    
+    .spotlight-section {
+      padding: 15rem 2rem;
+      height: auto;
+    }
+    
+    .spotlight-card {
+      width: 90%;
+      max-width: 600px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .spotlight-card .spotlight-image {
+      width: 100%;
+      height: 240px;
+    }
+    
+    .spotlight-card .spotlight-content h3 {
+      font-size: 36px;
+      line-height: 44px;
+    }
+    
+    .spotlight-card .spotlight-content p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    
+    .resource-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 600px;
+    }
+    
+    .footer-container,
+    .reviews-section,
+    .faq-section,
+    .trusted-by-section {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    
+    .footer-container {
+      height: auto;
+      padding-bottom: 2rem;
+    }
+    
+    .footer-top,
+    .footer-main {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    
+    .footer-brand {
+      max-width: 100%;
+    }
+    
+    .faq-container,
+    .faq-list {
+      width: 100%;
+    }
+    
+    .reviews-header {
+      padding: 0 2rem;
+    }
+    
+    .reviews-grid {
+      column-count: 2;
+    }
   }
   
-  .footer-container,
-  .reviews-section,
-  .faq-section,
-  .trusted-by-section {
-    padding-left: 5rem;
-    padding-right: 5rem;
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0.8rem 1rem;
+    }
+    
+    /* Mobile navigation - consider adding a hamburger menu here */
+    .nav-links {
+      display: none; /* You'll need JavaScript to toggle this for a mobile menu */
+    }
+    
+    .hero-content {
+      padding: 0 0.5rem;
+    }
+    
+    .hero-content h1 {
+      font-size: 50px;
+      line-height: 55px;
+    }
+    
+    .hero-content p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .hero-buttons button {
+      width: 100%;
+    }
+    
+    .spotlight-header,
+    .resource-header,
+    .spotlightcreator-header {
+      padding: 0 1rem;
+      text-align: center;
+      align-items: center;
+    }
+    
+    .spotlight-title,
+    .spotlightcreator-title,
+    .reviews-title,
+    .footer-top h2 {
+      font-size: 36px;
+      line-height: 44px;
+      text-align: center;
+    }
+    
+    .spotlight-description,
+    .spotlightcreator-description,
+    .reviews-subtitle {
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+    }
+    
+    .spotlight-section {
+      padding: 10rem 1rem;
+    }
+    
+    .resource-grid {
+      grid-template-columns: 1fr;
+      max-width: 300px;
+    }
+    
+    .resource-card {
+      width: 100%;
+    }
+    
+    .reviews-grid {
+      column-count: 1;
+    }
+    
+    .review-card {
+      width: 100%;
+    }
+    
+    .faq-section {
+      padding: 50px 1rem;
+    }
+    
+    .faq-question p {
+      font-size: 14px;
+    }
+    
+    .faq-answer p {
+      font-size: 14px;
+      padding-left: 5px;
+    }
+    
+    .trusted-by-section {
+      padding: 50px 1rem;
+    }
+    
+    .partner-logo {
+      flex: 0 0 120px;
+    }
+    
+    .footer-container {
+      padding: 50px 1rem 25px 1rem;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+    
+    .footer-legal {
+      flex-direction: column;
+      gap: 5px;
+    }
   }
   
-  .spotlight-header,
-  .resource-header,
-  .spotlightcreator-header,
-  .reviews-header {
-    padding: 0 5rem;
+  /* Small mobile styles */
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 40px;
+      line-height: 45px;
+    }
+    
+    .spotlight-card .spotlight-content h3 {
+      font-size: 28px;
+      line-height: 34px;
+    }
+    
+    .spotlight-card .spotlight-content p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    
+    .resource-card h3 {
+      font-size: 20px;
+      line-height: 28px;
+      min-height: auto;
+    }
+    
+    .resource-card p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    
+    .review-card {
+      padding: 20px;
+    }
+    
+    .review-card__name {
+      font-size: 18px;
+    }
+    
+    .review-card__text p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    
+    .faq-question p {
+      font-size: 14px;
+    }
+    
+    .faq-answer p {
+      font-size: 14px;
+    }
   }
   
-  .spotlight-section {
-    padding: 20rem 5rem;
+  /* For extra large screens - prevent excessive stretching */
+  @media (min-width: 1600px) {
+    .container {
+      max-width: 1400px;
+    }
+    
+    .navbar-container {
+      max-width: 1600px;
+    }
   }
   
-  .spotlight-card {
-    width: 700px;
+  /* Mobile Menu Styles - You'll need JavaScript to toggle these */
+  .mobile-menu-button {
+    display: none;
+    cursor: pointer;
   }
   
-  .faq-list {
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-  }
-}
-
-/* Tablet styles */
-@media (max-width: 992px) {
-  .navbar {
-    padding: 0.8rem 2rem;
-  }
-  
-  .navbar-container {
-    width: 95%;
-  }
-  
-  .nav-links {
-    width: auto;
-    gap: 15px;
-  }
-  
-  .nav-links a {
-    font-size: 16px;
-  }
-  
-  .hero-content h1 {
-    font-size: 70px;
-    line-height: 70px;
-  }
-  
-  .hero-content p {
-    font-size: 16px;
-    line-height: 24px;
-    max-width: 500px;
-  }
-  
-  .spotlight-section {
-    padding: 15rem 2rem;
-    height: auto;
-  }
-  
-  .spotlight-card {
-    width: 90%;
-    max-width: 600px;
+    height: 100vh;
+    background: #0e0e0e;
+    z-index: 1000;
     flex-direction: column;
-    gap: 20px;
-  }
-  
-  .spotlight-card .spotlight-image {
-    width: 100%;
-    height: 240px;
-  }
-  
-  .spotlight-card .spotlight-content h3 {
-    font-size: 36px;
-    line-height: 44px;
-  }
-  
-  .spotlight-card .spotlight-content p {
-    font-size: 18px;
-    line-height: 28px;
-  }
-  
-  .resource-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 600px;
-  }
-  
-  .footer-container,
-  .reviews-section,
-  .faq-section,
-  .trusted-by-section {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  
-  .footer-container {
-    height: auto;
-    padding-bottom: 2rem;
-  }
-  
-  .footer-top,
-  .footer-main {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-  }
-  
-  .footer-brand {
-    max-width: 100%;
-  }
-  
-  .faq-container,
-  .faq-list {
-    width: 100%;
-  }
-  
-  .reviews-header {
-    padding: 0 2rem;
-  }
-  
-  .reviews-grid {
-    column-count: 2;
-  }
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.8rem 1rem;
-  }
-  
-  /* Mobile navigation - consider adding a hamburger menu here */
-  .nav-links {
-    display: none; /* You'll need JavaScript to toggle this for a mobile menu */
-  }
-  
-  .hero-content {
-    padding: 0 0.5rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 50px;
-    line-height: 55px;
-  }
-  
-  .hero-content p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .hero-buttons button {
-    width: 100%;
-  }
-  
-  .spotlight-header,
-  .resource-header,
-  .spotlightcreator-header {
-    padding: 0 1rem;
-    text-align: center;
+    justify-content: center;
     align-items: center;
   }
   
-  .spotlight-title,
-  .spotlightcreator-title,
-  .reviews-title,
-  .footer-top h2 {
-    font-size: 36px;
-    line-height: 44px;
-    text-align: center;
+  .mobile-menu.active {
+    display: flex;
   }
   
-  .spotlight-description,
-  .spotlightcreator-description,
-  .reviews-subtitle {
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
+  .mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
   }
   
-  .spotlight-section {
-    padding: 10rem 1rem;
-  }
-  
-  .resource-grid {
-    grid-template-columns: 1fr;
-    max-width: 300px;
-  }
-  
-  .resource-card {
-    width: 100%;
-  }
-  
-  .reviews-grid {
-    column-count: 1;
-  }
-  
-  .review-card {
-    width: 100%;
-  }
-  
-  .faq-section {
-    padding: 50px 1rem;
-  }
-  
-  .faq-question p {
-    font-size: 14px;
-  }
-  
-  .faq-answer p {
-    font-size: 14px;
-    padding-left: 5px;
-  }
-  
-  .trusted-by-section {
-    padding: 50px 1rem;
-  }
-  
-  .partner-logo {
-    flex: 0 0 120px;
-  }
-  
-  .footer-container {
-    padding: 50px 1rem 25px 1rem;
-  }
-  
-  .footer-bottom {
+  .mobile-menu-links {
+    display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    list-style: none;
     text-align: center;
   }
   
-  .footer-legal {
-    flex-direction: column;
-    gap: 5px;
-  }
-}
-
-/* Small mobile styles */
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 40px;
-    line-height: 45px;
+  .mobile-menu-links a {
+    font-family: var(--font-family-Font-1, Inter);
+    font-size: 24px;
+    font-weight: var(--font-weight-500, 500);
+    text-decoration: none;
+    color: white;
   }
   
-  .spotlight-card .spotlight-content h3 {
-    font-size: 28px;
-    line-height: 34px;
+  @media (max-width: 768px) {
+    .mobile-menu-button {
+      display: block;
+    }
   }
-  
-  .spotlight-card .spotlight-content p {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  
-  .resource-card h3 {
-    font-size: 20px;
-    line-height: 28px;
-    min-height: auto;
-  }
-  
-  .resource-card p {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  
-  .review-card {
-    padding: 20px;
-  }
-  
-  .review-card__name {
-    font-size: 18px;
-  }
-  
-  .review-card__text p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-  
-  .faq-question p {
-    font-size: 14px;
-  }
-  
-  .faq-answer p {
-    font-size: 14px;
-  }
-}
-
-/* For extra large screens - prevent excessive stretching */
-@media (min-width: 1600px) {
-  .container {
-    max-width: 1400px;
-  }
-  
-  .navbar-container {
-    max-width: 1600px;
-  }
-}
-
-/* Mobile Menu Styles - You'll need JavaScript to toggle these */
-.mobile-menu-button {
-  display: none;
-  cursor: pointer;
-}
-
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #0e0e0e;
-  z-index: 1000;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.mobile-menu.active {
-  display: flex;
-}
-
-.mobile-menu-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-.mobile-menu-links {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  list-style: none;
-  text-align: center;
-}
-
-.mobile-menu-links a {
-  font-family: var(--font-family-Font-1, Inter);
-  font-size: 24px;
-  font-weight: var(--font-weight-500, 500);
-  text-decoration: none;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .mobile-menu-button {
-    display: block;
-  }
-}
