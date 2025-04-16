@@ -151,14 +151,14 @@ const Home: React.FC = () => {
       <section className="faq-section fade-in">
         <h2>FAQ</h2>
         <div className="faq-container">
-        <FAQItem
-          question="What is FiveM ResourceFinder?"
-          answer="It is a platform to find FiveM resources."
-        />
-        <FAQItem
-          question="How do I add my resource?"
-          answer="Please contact us via Discord."
-        />
+          <FAQItem
+            question="What is FiveM ResourceFinder?"
+            answer="It is a platform to find FiveM resources."
+          />
+          <FAQItem
+            question="How do I add my resource?"
+            answer="Please contact us via Discord."
+          />
         </div>
       </section>
 
