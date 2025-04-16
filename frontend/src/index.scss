@@ -12,7 +12,7 @@ html {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   background: none;
-  background: var(--fivemresourcefinder-Mine-Shaft, #17171c);
+  background: var(--fivemresourcefinder-Mine-Shaft, #0e0e0e);
 }
 
 .container {
@@ -25,6 +25,51 @@ html {
   --font-family-Font-1: "Inter", sans-serif;
   --font-weight-500: 500;
   --color-text-small: linear-gradient(180deg, #ff5c00 0%, #993700 100%);
+}
+
+/* Animation du dégradé */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Fade In Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classes à appliquer sur vos éléments */
+.fadeInDown {
+  animation: fadeInDown 1s ease-out;
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease-out;
 }
 
 /* ============================
@@ -269,7 +314,8 @@ html {
 .spotlight-section {
   background: #0e0e0e;
   color: #fff;
-  padding: 4rem 12rem;
+  margin-top: 10vh;
+  padding: 0rem 12rem;
   position: relative;
   height: 100vh;
   display: flex;
@@ -310,6 +356,7 @@ html {
 
 .spotlight-header {
   display: flex;
+  margin-top: 0px;
   padding: 0 12.5rem;
   flex-direction: column;
   justify-content: center;
@@ -590,7 +637,6 @@ p {
   }
 }
 
-
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -602,7 +648,7 @@ p {
 .resource-card {
   border-radius: 10px;
   display: flex;
-  text-align: center;
+  text-align: start;
   width: 100%;
   display: flex;
   width: 226.67px;
@@ -612,6 +658,10 @@ p {
   /*gap: var(--item-spacing-30, 30px);*/
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card h3 {
+  text-align: start;
 }
 
 /*
@@ -635,7 +685,7 @@ p {
 /* Titre de la carte */
 .resource-card h3 {
   margin-top: 2rem;
-  color: var(--fivemresourcefinder-White, var(--color-white-solid, #FFF));
+  color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
   font-family: var(--font-family-Font-1, Inter);
   font-size: var(--font-size-24, 24px);
   font-style: normal;
@@ -646,7 +696,7 @@ p {
 
 /* Texte de description */
 .resource-card p {
-  color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #EBEBEB));
+  color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
 
   /* fivemresourcefinder/Semantic/Heading 3 */
   font-family: var(--font-family-Font-1, Inter);
@@ -722,87 +772,163 @@ p {
     width: 100%; /* Cartes plus grandes sur mobile */
   }
 }
-
-/* ============================
-   Reviews Section
-=============================== */
 .reviews-section {
-  padding: 3rem 0;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-.reviews-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.reviews-section p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #666;
-}
-
-.reviews-container {
+  background: #0e0e0e;
+  color: #fff;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  padding: 10px 560px 50px 560px;
+  flex-direction: column;
   justify-content: center;
-  padding: 0 1rem;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-.reviews-box {
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
+.reviews-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 34.5rem;
+  margin-top: 100px;
+  background: var(--fivemresourcefinder-Mine-Shaft, #0e0e0e);
+}
+
+.reviews-title {
+  color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: var(--font-size-50, 50px);
+  font-style: normal;
+  font-weight: var(--font-weight-700, 700);
+  line-height: var(--line-height-60, 60px);
+  letter-spacing: var(--letter-spacing--2_6, -2.6px);
+}
+
+.reviews-subtitle {
+  text-align: left;
+  color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: var(--font-size-24, 24px);
+  font-style: normal;
+  font-weight: var(--font-weight-500, 500);
+  line-height: var(--line-height-36, 36px);
+  letter-spacing: var(--letter-spacing--0_5, -0.5px);
+  margin-bottom: 2rem;
+}
+
+.reviews-grid {
+  column-count: 3;
+  column-gap: 20px;
 }
 
 .review-card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  text-align: left;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
+  width: 253.33px;
+  padding: 30px;
+  align-items: center;
+  gap: var(--item-spacing-30, 30px);
+  border-radius: 20px;
+  background: var(--color-grey-20, #333);
+  box-shadow: 0px 0.796px 2.389px -0.625px rgba(0, 0, 0, 0.05),
+    0px 2.415px 7.244px -1.25px rgba(0, 0, 0, 0.05),
+    0px 6.383px 19.148px -1.875px rgba(0, 0, 0, 0.05),
+    0px 20px 60px -2.5px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+  vertical-align: top;
 }
 
-.review-card img.review-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 1rem;
-  object-fit: cover;
+.review-card:hover {
+  transform: scale(1.03);
 }
 
-.review-card h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.review-card__profile {
   display: flex;
   align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-.review-card h4 span {
-  font-size: 0.9rem;
-  color: #888;
-  margin-left: 0.5rem;
+.review-card__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #3a3a3a;
+  position: relative;
 }
 
-.review-rating {
-  font-size: 1rem;
-  color: #f39c12;
-  margin-bottom: 0.5rem;
+.review-card__avatar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #2a2a2a;
+  transform: rotate(-45deg) translateY(-50%);
 }
 
-.review-card p {
-  font-size: 0.9rem;
-  color: #555;
+.review-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.trustpilot-section {
-  flex: 1;
-  min-width: 300px;
+.review-card__name {
+  color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: var(--opacity-20, 20px);
+  font-style: normal;
+  font-weight: var(--font-weight-700, 700);
+  line-height: var(--line-height-28, 28px);
+  letter-spacing: var(--letter-spacing--0_8, -0.8px);
+}
+
+.review-card__handle {
+  color: var(--fivemresourcefinder-Dusty-Gray, var(--color-grey-60, #999));
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: var(--font-size-14, 14px);
+  font-style: normal;
+  font-weight: var(--font-weight-400, 400);
+  line-height: var(--line-height-21, 21px);
+  letter-spacing: var(--letter-spacing--0_7, -0.7px);
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  width: 20px;
+  height: 19px;
+}
+
+.rating-score {
+  color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
+  font-family: Inter;
+  font-size: 25.692px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.385px;
+}
+
+.review-card__text p {
+  color: var(--fivemresourcefinder-Gallery, var(--color-grey-92, #ebebeb));
+  font-family: var(--font-family-Font-1, Inter);
+  font-size: var(--font-size-16, 16px);
+  font-style: normal;
+  font-weight: var(--font-weight-500, 500);
+  line-height: var(--line-height-25_6, 25.6px);
+  margin: 0;
 }
 
 /* ============================
@@ -852,16 +978,16 @@ p {
    Trusted By Section
 =============================== */
 .trusted-by-section {
-    display: flex;
-    padding: 100px 418px 50px 418px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--item-spacing-60, 60px);
+  display: flex;
+  padding: 100px 418px 50px 418px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--item-spacing-60, 60px);
 }
 
 .trusted-by-section h2 {
-  color: var(--fivemresourcefinder-White, var(--color-white-solid, #FFF));
+  color: var(--fivemresourcefinder-White, var(--color-white-solid, #fff));
 
   /* fivemresourcefinder/Semantic/Heading 2 */
   font-family: var(--font-family-Font-1, Inter);
@@ -1034,4 +1160,26 @@ p {
 
 .login-section button:hover {
   background: #5b6eae;
+}
+
+button,
+.nav-links a,
+.view-all-button {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover,
+.nav-links a:hover,
+.view-all-button:hover {
+  transform: translateY(-3px);
+}
+
+.resource-card img.resource-image,
+.store-card img {
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover img.resource-image,
+.store-card:hover img {
+  transform: scale(1.03);
 }

@@ -1,22 +1,161 @@
-import React from 'react';
+import React from "react";
 
-interface ReviewCardProps {
-  image: string;
-  name: string;
-  handle: string;
-  rating: number;
-  review: string;
-}
+const reviewsData = [
+  {
+    name: "Gtol",
+    handle: "gtol",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet nunc.",
+  },
+  {
+    name: "Gtol",
+    handle: "gtol",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.",
+  },
+  {
+    name: "Gtol",
+    handle: "gtol",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
+  },
+  {
+    name: "Gtol",
+    handle: "gtol",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet nunc non tortor malesuada.",
+  },
+  {
+    name: "Gtol",
+    handle: "gtol",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
+  },
+  {
+    name: "Gtol",
+    handle: "gtol",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
+  },
+  {
+    name: "Gtol",
+    handle: "gtol",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    name: "Gtol",
+    handle: "gtol",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
+  },
+  {
+    name: "Gtol",
+    handle: "gtol",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.",
+  },
+];
 
-const ReviewCard: React.FC<ReviewCardProps> = ({ image, name, handle, rating, review }) => {
-  const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+const ReviewCard: React.FC = () => {
   return (
-    <div className="review-card">
-      <img src={image} alt={name} className="review-image" />
-      <h4>{name} <span>{handle}</span></h4>
-      <div className="review-rating">{stars} <span>({rating})</span></div>
-      <p>{review}</p>
-    </div>
+    <section className="all-container-reviews">
+      <div className="reviews-header">
+        <h2 className="reviews-title">What Our Users Say</h2>
+        <p className="reviews-subtitle">
+          Read honest reviews and feedback from <br />
+          real users about our website.
+        </p>
+      </div>
+      <div className="reviews-section">
+        <div className="reviews-grid">
+          {reviewsData.map((review, index) => (
+            <div className="review-card" key={index}>
+              <div className="review-card__profile">
+                <div className="review-card__avatar"></div>
+                <div className="review-card__info">
+                  <span className="review-card__name">{review.name}</span>
+                  <span className="review-card__handle">@{review.handle}</span>
+                </div>
+              </div>
+              <div className="star-rating">
+                <div className="stars">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="19"
+                    viewBox="0 0 27 26"
+                    fill="none"
+                    className="star"
+                  >
+                    <path
+                      d="M21.2154 16.1744C20.8701 16.5091 20.7114 16.9931 20.7901 17.4678L21.9754 24.0278C22.0754 24.5838 21.8407 25.1464 21.3754 25.4678C20.9194 25.8011 20.3127 25.8411 19.8154 25.5744L13.9101 22.4944C13.7047 22.3851 13.4767 22.3264 13.2434 22.3198H12.8821C12.7567 22.3384 12.6341 22.3784 12.5221 22.4398L6.6154 25.5344C6.3234 25.6811 5.99274 25.7331 5.66874 25.6811C4.8794 25.5318 4.35274 24.7798 4.48207 23.9864L5.66874 17.4264C5.7474 16.9478 5.58874 16.4611 5.2434 16.1211L0.428735 11.4544C0.0260688 11.0638 -0.113931 10.4771 0.0700688 9.94776C0.248735 9.41976 0.704735 9.03443 1.2554 8.94776L7.88207 7.98643C8.38607 7.93443 8.82874 7.62776 9.0554 7.17443L11.9754 1.18776C12.0447 1.05443 12.1341 0.931762 12.2421 0.827762L12.3621 0.734429C12.4247 0.665095 12.4967 0.607762 12.5767 0.561095L12.7221 0.507762L12.9487 0.414429H13.5101C14.0114 0.466429 14.4527 0.766429 14.6834 1.21443L17.6421 7.17443C17.8554 7.61043 18.2701 7.91309 18.7487 7.98643L25.3754 8.94776C25.9354 9.02776 26.4034 9.41443 26.5887 9.94776C26.7634 10.4824 26.6127 11.0691 26.2021 11.4544L21.2154 16.1744Z"
+                      fill="#FF5C00"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="19"
+                    viewBox="0 0 27 26"
+                    fill="none"
+                    className="star"
+                  >
+                    <path
+                      d="M21.2154 16.1744C20.8701 16.5091 20.7114 16.9931 20.7901 17.4678L21.9754 24.0278C22.0754 24.5838 21.8407 25.1464 21.3754 25.4678C20.9194 25.8011 20.3127 25.8411 19.8154 25.5744L13.9101 22.4944C13.7047 22.3851 13.4767 22.3264 13.2434 22.3198H12.8821C12.7567 22.3384 12.6341 22.3784 12.5221 22.4398L6.6154 25.5344C6.3234 25.6811 5.99274 25.7331 5.66874 25.6811C4.8794 25.5318 4.35274 24.7798 4.48207 23.9864L5.66874 17.4264C5.7474 16.9478 5.58874 16.4611 5.2434 16.1211L0.428735 11.4544C0.0260688 11.0638 -0.113931 10.4771 0.0700688 9.94776C0.248735 9.41976 0.704735 9.03443 1.2554 8.94776L7.88207 7.98643C8.38607 7.93443 8.82874 7.62776 9.0554 7.17443L11.9754 1.18776C12.0447 1.05443 12.1341 0.931762 12.2421 0.827762L12.3621 0.734429C12.4247 0.665095 12.4967 0.607762 12.5767 0.561095L12.7221 0.507762L12.9487 0.414429H13.5101C14.0114 0.466429 14.4527 0.766429 14.6834 1.21443L17.6421 7.17443C17.8554 7.61043 18.2701 7.91309 18.7487 7.98643L25.3754 8.94776C25.9354 9.02776 26.4034 9.41443 26.5887 9.94776C26.7634 10.4824 26.6127 11.0691 26.2021 11.4544L21.2154 16.1744Z"
+                      fill="#FF5C00"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="19"
+                    viewBox="0 0 27 26"
+                    fill="none"
+                    className="star"
+                  >
+                    <path
+                      d="M21.2154 16.1744C20.8701 16.5091 20.7114 16.9931 20.7901 17.4678L21.9754 24.0278C22.0754 24.5838 21.8407 25.1464 21.3754 25.4678C20.9194 25.8011 20.3127 25.8411 19.8154 25.5744L13.9101 22.4944C13.7047 22.3851 13.4767 22.3264 13.2434 22.3198H12.8821C12.7567 22.3384 12.6341 22.3784 12.5221 22.4398L6.6154 25.5344C6.3234 25.6811 5.99274 25.7331 5.66874 25.6811C4.8794 25.5318 4.35274 24.7798 4.48207 23.9864L5.66874 17.4264C5.7474 16.9478 5.58874 16.4611 5.2434 16.1211L0.428735 11.4544C0.0260688 11.0638 -0.113931 10.4771 0.0700688 9.94776C0.248735 9.41976 0.704735 9.03443 1.2554 8.94776L7.88207 7.98643C8.38607 7.93443 8.82874 7.62776 9.0554 7.17443L11.9754 1.18776C12.0447 1.05443 12.1341 0.931762 12.2421 0.827762L12.3621 0.734429C12.4247 0.665095 12.4967 0.607762 12.5767 0.561095L12.7221 0.507762L12.9487 0.414429H13.5101C14.0114 0.466429 14.4527 0.766429 14.6834 1.21443L17.6421 7.17443C17.8554 7.61043 18.2701 7.91309 18.7487 7.98643L25.3754 8.94776C25.9354 9.02776 26.4034 9.41443 26.5887 9.94776C26.7634 10.4824 26.6127 11.0691 26.2021 11.4544L21.2154 16.1744Z"
+                      fill="#FF5C00"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="19"
+                    viewBox="0 0 27 26"
+                    fill="none"
+                    className="star"
+                  >
+                    <path
+                      d="M21.2154 16.1744C20.8701 16.5091 20.7114 16.9931 20.7901 17.4678L21.9754 24.0278C22.0754 24.5838 21.8407 25.1464 21.3754 25.4678C20.9194 25.8011 20.3127 25.8411 19.8154 25.5744L13.9101 22.4944C13.7047 22.3851 13.4767 22.3264 13.2434 22.3198H12.8821C12.7567 22.3384 12.6341 22.3784 12.5221 22.4398L6.6154 25.5344C6.3234 25.6811 5.99274 25.7331 5.66874 25.6811C4.8794 25.5318 4.35274 24.7798 4.48207 23.9864L5.66874 17.4264C5.7474 16.9478 5.58874 16.4611 5.2434 16.1211L0.428735 11.4544C0.0260688 11.0638 -0.113931 10.4771 0.0700688 9.94776C0.248735 9.41976 0.704735 9.03443 1.2554 8.94776L7.88207 7.98643C8.38607 7.93443 8.82874 7.62776 9.0554 7.17443L11.9754 1.18776C12.0447 1.05443 12.1341 0.931762 12.2421 0.827762L12.3621 0.734429C12.4247 0.665095 12.4967 0.607762 12.5767 0.561095L12.7221 0.507762L12.9487 0.414429H13.5101C14.0114 0.466429 14.4527 0.766429 14.6834 1.21443L17.6421 7.17443C17.8554 7.61043 18.2701 7.91309 18.7487 7.98643L25.3754 8.94776C25.9354 9.02776 26.4034 9.41443 26.5887 9.94776C26.7634 10.4824 26.6127 11.0691 26.2021 11.4544L21.2154 16.1744Z"
+                      fill="#FF5C00"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="19"
+                    viewBox="0 0 27 26"
+                    fill="none"
+                    className="star"
+                  >
+                    <path
+                      d="M21.2154 16.1744C20.8701 16.5091 20.7114 16.9931 20.7901 17.4678L21.9754 24.0278C22.0754 24.5838 21.8407 25.1464 21.3754 25.4678C20.9194 25.8011 20.3127 25.8411 19.8154 25.5744L13.9101 22.4944C13.7047 22.3851 13.4767 22.3264 13.2434 22.3198H12.8821C12.7567 22.3384 12.6341 22.3784 12.5221 22.4398L6.6154 25.5344C6.3234 25.6811 5.99274 25.7331 5.66874 25.6811C4.8794 25.5318 4.35274 24.7798 4.48207 23.9864L5.66874 17.4264C5.7474 16.9478 5.58874 16.4611 5.2434 16.1211L0.428735 11.4544C0.0260688 11.0638 -0.113931 10.4771 0.0700688 9.94776C0.248735 9.41976 0.704735 9.03443 1.2554 8.94776L7.88207 7.98643C8.38607 7.93443 8.82874 7.62776 9.0554 7.17443L11.9754 1.18776C12.0447 1.05443 12.1341 0.931762 12.2421 0.827762L12.3621 0.734429C12.4247 0.665095 12.4967 0.607762 12.5767 0.561095L12.7221 0.507762L12.9487 0.414429H13.5101C14.0114 0.466429 14.4527 0.766429 14.6834 1.21443L17.6421 7.17443C17.8554 7.61043 18.2701 7.91309 18.7487 7.98643L25.3754 8.94776C25.9354 9.02776 26.4034 9.41443 26.5887 9.94776C26.7634 10.4824 26.6127 11.0691 26.2021 11.4544L21.2154 16.1744Z"
+                      fill="#FF5C00"
+                    />
+                  </svg>
+                </div>
+                <span className="rating-score">{review.rating.toFixed(1)}</span>
+              </div>
+              <div className="review-card__text">
+                <p>{review.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

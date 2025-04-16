@@ -1,0 +1,59 @@
+{
+  "title": "**__Illegal Missions__**",
+  "description": "**Description:**\n*This script offers a dynamic system of illegal missions for your players, available solo or in teams. Missions are generated randomly, in a logical and coherent way, ensuring a varied experience without repetition. They refresh at regular intervals and are synchronized between players: if one team completes all available missions, others will have to wait for new ones to be generated. With the purchase, 5 DLCs are included, offering various missions such as: Gofast, Car Theft, Assassination, Armored Van Heist, and ATM Theft. And that's not all! You can easily add more illegal missions by installing additional DLCs.*",
+  "url": "https://lyre.tebex.io/package/6603853",
+  "color": 3092790,
+  "image": {
+    "url": "https://dunb17ur4ymx4.cloudfront.net/packages/images/47aae14600ebbc3b2ed5ddc2cb58108f0f98df59.png"
+  },
+  "fields": [
+    {
+      "name": "💰 **Price**",
+      "value": "`24.5$`",
+      "inline": true
+    },
+    {
+      "name": "🛠️ **Features**",
+      "value": "• **Automatic Generation of Illegal Missions – Missions are generated dynamically, ensuring variety and excitement.**\n• **Team Play – Form a team with your friends and tackle missions together.**\n• **Customizable Payment – The team leader can assign a percentage of the earnings to each member.**\n• **Unique Missions – Every mission is designed to be engaging and never repetitive.**",
+      "inline": false
+    },
+    {
+      "name": "🔗 **Dependencies**",
+      "value": "*Reputation System – Players gain or lose reputation based on their mission outcomes.*",
+      "inline": false
+    },
+    {
+      "name": "⚙️ **How It Works**",
+      "value": "• *Law Enforcement Alerts – Cops are notified based on the type of mission the player or team is undertaking.*\n• *Advanced Player Stats – Track wins, losses, win/loss ratios, solo/team performance, and more.*\n• *Easy DLC Integration – Add new missions effortlessly by simply dragging and dropping folders into your server.*\n• *Perfect Synchronization – Seamless synchronization between players, ensuring everyone experiences missions at the same time without disruption.*",
+      "inline": false
+    },
+    {
+      "name": "🔧 **Additional Configurations**",
+      "value": "_Multi-language Support – The script is available in 9 languages by default, with easy customization options._",
+      "inline": false
+    },
+    {
+      "name": "❓ **Support**",
+      "value": "_Beautiful Web UI – User-friendly and visually appealing web interfaces._",
+      "inline": false
+    },
+    {
+      "name": "✅ **Compatibilities**",
+      "value": "*ESX,QBCORE,QBOX*",
+      "inline": false
+    },
+    {
+      "name": "📄 **Documentation**",
+      "value": "[Link here](https://docs.lyre.lets-pop.fr/)",
+      "inline": false
+    },
+    {
+      "name": "💬 **Discord**",
+      "value": "[Discord Server](https://discord.gg/w8Tde2JBAD)",
+      "inline": false
+    }
+  ],
+  "footer": {
+    "text": "Powered by FiveM ResourceFinder"
+  }
+}
