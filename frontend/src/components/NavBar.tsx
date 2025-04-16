@@ -8,7 +8,7 @@ const NavBar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Si on a scrollé de plus de 50px, on ajoute la classe
+
       if (window.scrollY > 50) {
         setScrolled(true);
       } else {
@@ -18,7 +18,6 @@ const NavBar: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup au démontage
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
