@@ -134,13 +134,6 @@ const SpotlightSection: React.FC = () => {
   return (
     <section className="spotlight-section">
       <div className="container">
-        {/* Titre principal et description */}
-        <div className="spotlight-header">
-          <h2 className="spotlight-title">Creator Spotlight</h2>
-          <p className="spotlight-description">
-          Check out our featured resources! These are premium placements showcasing top-tier creations available for the community.
-          </p>
-        </div>
 
         {/* Slider */}
         <div className="spotlight-slider">
