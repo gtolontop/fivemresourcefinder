@@ -80,7 +80,7 @@ const Home: React.FC = () => {
       </section>
       {/* Creator Spotlight Section */}
       <div className="container">
-          <div className="spotlight-header">
+          <div className="spotlightcreator-header">
             <h2 className="spotlight-title">Spotlight of Resources</h2>
             <p className="spotlight-description">
               Showcase your resource to a broader audience! This space is

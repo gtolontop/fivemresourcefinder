@@ -316,7 +316,7 @@ html {
   color: #fff;
   padding: 0rem 12rem;
   position: relative;
-  height: 100vh;
+  height: 76vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -472,6 +472,15 @@ p {
       transition: all 0.3s ease;
     }
   }
+}
+
+.spotlightcreator-header {
+  display: flex;
+  margin-top: 100px;
+  padding: 0 12.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* ============================
