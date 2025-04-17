@@ -160,44 +160,52 @@ const NavBar: React.FC = () => {
 
         {isMobile ? (
           <Drawer open={menuOpen} onOpenChange={setMenuOpen}>
-            {/* Le bouton qui ouvre le menu */}
             <DrawerTrigger
               asChild
               className="mobile-menu-button"
               onClick={() => setMenuOpen(true)}
             >
-              {/* On passe directement l’icône, pas un <button> emboîté */}
               <Menu size={24} color="#fff" />
             </DrawerTrigger>
 
-            {/* On affiche le contenu *seulement* si menuOpen */}
             {menuOpen && (
-              <DrawerContent>
-                <div className="mobile-menu-header">
-                  <DrawerClose
-                    asChild
-                    className="mobile-menu-close"
+              <>
+                {/* <-- le backdrop conditionnel */}
+                {!scrolled && (
+                  <div
+                    className="drawer-overlay fixed inset-0 z-40 bg-black/80"
                     onClick={() => setMenuOpen(false)}
-                  >
-                    <X size={24} color="#fff" />
-                  </DrawerClose>
-                </div>
-                <ul className="mobile-nav-links">
-                  {links.map(({ to, label }) => (
-                    <li key={to}>
-                      <Link
-                        to={to}
-                        className={
-                          location.pathname === to ? "active-link" : ""
-                        }
-                        onClick={() => setMenuOpen(false)}
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </DrawerContent>
+                  />
+                )}
+
+                {/* ton contenu du menu */}
+                <DrawerContent className="drawer-content">
+                  <div className="mobile-menu-header">
+                    <DrawerClose
+                      asChild
+                      className="mobile-menu-close"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      <X size={24} color="#fff" />
+                    </DrawerClose>
+                  </div>
+                  <ul className="mobile-nav-links">
+                    {links.map(({ to, label }) => (
+                      <li key={to}>
+                        <Link
+                          to={to}
+                          className={
+                            location.pathname === to ? "active-link" : ""
+                          }
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </DrawerContent>
+              </>
             )}
           </Drawer>
         ) : (
