@@ -1,4 +1,3 @@
-// NavBar.tsx
 import React, { useState, useEffect, ReactElement } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
@@ -22,7 +21,6 @@ const DrawerTrigger: React.FC<DrawerTriggerProps> = ({
   ...props
 }) => {
   if (asChild) {
-    // On clone le ReactElement en lui injectant les props et la classe
     const existingClass = children.props.className || "";
     const newClass = [existingClass, className].filter(Boolean).join(" ");
     return React.cloneElement(children, { ...props, className: newClass });
@@ -96,7 +94,6 @@ const Drawer: React.FC<DrawerProps> = ({ open, onOpenChange, children }) => {
 
   return (
     <div className="relative">
-      {/* Cloner chaque enfant valide en lui passant le drawerContext */}
       {React.Children.map(children, (child) => {
         if (!React.isValidElement(child)) return child;
         return React.cloneElement(child as ReactElement<any>, {
@@ -104,7 +101,6 @@ const Drawer: React.FC<DrawerProps> = ({ open, onOpenChange, children }) => {
         });
       })}
 
-      {/* Overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/80"
@@ -170,7 +166,6 @@ const NavBar: React.FC = () => {
 
             {menuOpen && (
               <>
-                {/* <-- le backdrop conditionnel */}
                 {!scrolled && (
                   <div
                     className="drawer-overlay fixed inset-0 z-40 bg-black/80"
@@ -178,7 +173,6 @@ const NavBar: React.FC = () => {
                   />
                 )}
 
-                {/* ton contenu du menu */}
                 <DrawerContent className="drawer-content">
                   <div className="mobile-menu-header">
                     <DrawerClose
