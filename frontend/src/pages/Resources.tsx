@@ -8,7 +8,7 @@ const Resources: React.FC = () => {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetch('/api/resources')
+    fetch('http://83.150.218.42:8102/api/resources')
       .then(res => res.json())
       .then(data => setResources(data))
       .catch(err => console.error(err));
